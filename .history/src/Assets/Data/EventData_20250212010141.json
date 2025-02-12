@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "title": "SPLASH",
+      "date": "24-AUG 2022",
+      "time": "9:30 AM",
+      "venue": "MLRIT",
+      "image": "Events/SPLASH.webp",
+      "description": "A 90-minute Campus-level coding competition wherein participants are given a problem set to solve in their preferred programming language and get an opportunity to show up their programming skills.",
+      "status": "0"
+    },
+    {
+      "id": 2,
+      "title": "GameHub 2.O",
+      "date": "11-APR 2022",
+      "time": "9:30 AM",
+      "venue": "MLRIT",
+      "image": "Events/GAMEHUB_2.webp",
+      "description": "Bored of old games? Ever wanted to create your own? Scope Club presents GameHub-2.0, a 3-day hackathon with a bootcamp, expert guidance, and a creative environment. Awaken your inner developer and build a game on limitless themes!",
+      "status": "0"
+    },
+    {
+      "id": 3,
+      "title": "Modifest",
+      "date": "2-DEC 2021",
+      "time": "9:30 AM",
+      "venue": "MLRIT",
+      "image": "Events/MODIFEST.webp",
+      "description": "SCOPE Club is back again to provide you an oppurtunity to explore the most popular domains WEB and APP Development with modifest",
+      "status": "0"
+    },
+    {
+      "id": 4,
+      "title": "CBUG Contest",
+      "date": "12-OCT 2020",
+      "time": "",
+      "venue": "MLRIT",
+      "image": "Events/CBUG.webp",
+      "description": "7 days Online contest in which Winner will get Amazon Gift Voucher And Some Well participated Participents will get Udemy course",
+      "status": "0"
+    },
+    {
+      "id": 5,
+      "title": "GameHub",
+      "date": "12-DEC 2020",
+      "time": "5:30 PM",
+      "venue": "MLRIT",
+      "image": "Events/GAMEHUB_1.webp",
+      "description": "36 Hours Hackathon on Game development.",
+      "status": "0"
+    },
+    {
+      "id": 6,
+      "title": "Codewars",
+      "date": "12-OCT 2020",
+      "time": "9:30 AM",
+      "venue": "MLRIT",
+      "image": "Events/CODEWARS.webp",
+      "description": "A Coding Contest on Coding Ninjas platform.",
+      "status": "0"
+    },
+    {
+      "id": 7,
+      "title": "AppFiesta",
+      "date": "4-MAY 2023",
+      "time": "9:30 AM",
+      "venue": "MLRIT",
+      "image": "Events/Appfiesta.jpeg",
+      "description": "Hackathon  on Mobile Application Development.",
+      "status": "0"
+    }
+  ]

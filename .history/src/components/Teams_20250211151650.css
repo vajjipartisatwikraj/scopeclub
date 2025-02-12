@@ -1,0 +1,15 @@
+.teams-bod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+}
+
+.bod-container {
+    margin: 30px;
+    height: 440px;
+  width: 330px;
+  border-radius: 20px;
+  border: 0.795px solid #33d90b;
+  background: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,40 @@
+.contact {
+  width: 85%;
+  display: inline-block;
+  padding: 200px 80px;
+  text-align: left;
+}
+
+.c-head {
+  font-weight: 500;
+  font-size: 4.5rem;
+  line-height: 1;
+  display: block;
+}
+
+.c-para {
+  width: 50%;
+  font-size: 1.12rem;
+  margin-top: 7.5rem;
+  line-height: 1.75rem;
+}
+
+.c-mail {
+  color: rgb(36, 172, 255);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    padding: 190px 5px;
+  }
+
+  .c-head {
+    font-size: 3rem;
+  }
+  .c-para {
+    font-size: 1rem;
+    word-spacing: 3px;
+    width: 65%;
+  }
+}

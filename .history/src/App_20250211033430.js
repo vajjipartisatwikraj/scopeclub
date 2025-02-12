@@ -1,0 +1,203 @@
+import React, { useEffect, useRef } from 'react';
+import Navbar from './components/Navbar';
+import './App.css';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+function App() {
+
+  const headingsRef = useRef([]);
+
+  useEffect(() => {
+    gsap.utils.toArray([".wdwd-01-num", ".wdwd-02-num", ".wdwd-03-num"]).forEach((num) => {
+      gsap.to(num, {
+        color: "#33d90b", // Hover color
+        duration: 0.5, // Smooth transition
+        scrollTrigger: {
+          trigger: num,
+          start: "top 20%", // Adjust trigger position
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+  }, []);
+  
+
+  useEffect(() => {
+    headingsRef.current.forEach((heading) => {
+      if (heading) {
+        let letters = Array.from(heading.childNodes);
+        heading.innerHTML = '';
+
+        letters.forEach((node) => {
+          if (node.nodeType === 3) { // Text node
+            node.textContent.split('').forEach((char) => {
+              let span = document.createElement('span');
+              if (char === ' ') {
+                span.innerHTML = '&nbsp;';
+              } else {
+                span.textContent = char;
+              }
+              span.style.display = 'inline-block';
+              heading.appendChild(span);
+            });
+          } else {
+            heading.appendChild(node.cloneNode(true)); // Preserve existing elements like spans
+          }
+        });
+
+        gsap.fromTo(
+          heading.children,
+          { opacity: 0, y: -50, rotationX: 90 },
+          {
+            opacity: 1,
+            y: 0,
+            rotationX: 0,
+            duration: 1.2,
+            ease: 'power3.out',
+            stagger: 0.05,
+            scrollTrigger: {
+              trigger: heading,
+              start: 'top 80%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      const coords = { x: 0, y: 0 };
+      const circles = document.querySelectorAll('.circle');
+      if (circles.length === 0) return;
+
+      circles.forEach((circle) => {
+        circle.x = 0;
+        circle.y = 0;
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+      });
+
+      function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+
+        circles.forEach((circle, index) => {
+          if (!circle) return;
+
+          circle.style.left = `${x - 12}px`;
+          circle.style.top = `${y - 12}px`;
+          circle.style.scale = (circles.length - index) / circles.length;
+          circle.x = x;
+          circle.y = y;
+
+          const nextCircle = circles[index + 1] || circles[0];
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+        });
+
+        requestAnimationFrame(animateCircles);
+      }
+
+      animateCircles();
+    }, 100);
+  }, []);
+
+
+  return (
+    <div>
+      <Navbar />
+      <div className="green-container">
+        <div className="top-layer">
+          <div className="hw-container">
+            <p className="hw-text">Hello, World<span className="fontChange">!</span></p>
+            <div className="hw-arrow"></div>
+          </div>
+          <h1 ref={(el) => (headingsRef.current[4] = el)} className="head">We Are Team <span className="highlighted">Scope</span>.</h1>
+          <p className="caption">We transform coding passion into real-world projects, turning ideas into impactful experiences through collaboration, guidance, and hands-on learning.</p>
+        </div>
+        <div className="inner-container">
+          <div className="grid-image-left"></div>
+          <div className="circle-light"></div>
+          <div className="grid-image-right"></div>
+          <div className="circles">
+            <div className="circle1"></div>
+            <div className="circle2"></div>
+            <div className="circle3"></div>
+          </div>
+        </div>
+      </div>
+      <div className="inside-scope">
+        <div className="is-circle-light"></div>
+        <div className="is-top-layer">
+          <div className="is-contents">
+            <h2 ref={(el) => (headingsRef.current[0] = el)} className='is-head'>Inside <span className="highlighted">Scope</span>.</h2>
+            <p className='is-caption'>SCOPE Club, the technical club of MLRIT, fosters a strong coding culture through collaboration and events in AI, Open Source, Game Development, Web & App Development, and more. It connects students with experienced mentors, providing an official platform for guidance, networking, and growth beyond campus boundaries.</p>
+          </div>
+          <div className="is-image"></div>
+        </div>
+      </div>
+      <div className="wdwd">
+        <h2 ref={(el) => (headingsRef.current[1] = el)} className="wdwd-head">What do <span className="highlighted">we DO</span>?</h2>
+        <div className="wdwd-main-container">
+        <div className="wdwe-01-container">
+          <p className="wdwd-01-num">01.</p>
+          <div className="wdwd-01">
+            <h3 className="wdwd-01-head">Hackathons</h3>
+            <p className="wdwd-01-content">At SCOPE Club, we believe that hackathons are more than just coding competitions—they're a launchpad for innovation, collaboration, and real-world problem-solving. We regularly organize hackathons that bring together passionate developers, designers, and problem-solvers to build, innovate, and compete.</p>
+          </div>
+        </div>
+        <div className="wdwe-02-container">
+          <div className="wdwd-02">
+            <h3 className="wdwd-02-head">Coding Contests</h3>
+            <p className="wdwd-02-content">At SCOPE Club, we foster a strong competitive coding culture by organizing exciting coding contests that challenge participants to think logically, optimize solutions, and push their limits. Whether you're a beginner or an experienced coder, our contests provide the perfect platform to sharpen your problem-solving skills, learn new algorithms, and compete with the best minds.</p>
+          </div>
+          <p className="wdwd-02-num">02.</p>
+        </div>
+        <div className="wdwe-03-container">
+          <p className="wdwd-03-num">03.</p>
+          <div className="wdwd-03">
+            <h3 className="wdwd-03-head">Projects</h3>
+            <p className="wdwd-03-content">At SCOPE Club, we believe that coding is more than just solving problems—it’s about building real-world solutions. Through our project-based learning approach, we encourage students to collaborate, innovate, and develop projects that have a tangible impact.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div className="brand-events">
+        <div className="brand-events-top-container">
+        <h2 ref={(el) => (headingsRef.current[2] = el)} className="brand-events-head">Our <span className="highlighted">events</span> define our <span className="highlighted">brand</span>.</h2>
+        <p className="brand-events-caption">SCOPE Club events drive innovation through hackathons, coding contests, and tech workshops. We foster hands-on learning, mentorship, and collaboration. From problem-solving to real-world impact, our events shape a thriving tech community.</p>
+        </div>
+        <div className="brand-events-bottom-container">
+        <div className="logo-container">
+          <img src="/images/zenith.png" alt="Zenith" className="logo" />
+          <img src="/images/webmania.png" alt="webmania" className="logo" />
+          <img src="/images/modifest.png" alt="Modifest" className="logo" />
+          <img src="/images/spotlight.png" alt="Spotlight" className="logo" style={{height:'30px'}}/>
+          <img src="/images/cbug.png" alt="CBUG" className="logo" />
+          <img src="/images/gamehub.png" alt="Gamehub" className="logo" />
+          <img src="/images/splash.png" alt="Splash" className="logo" />
+          <img src="/images/appfiesta.png" alt="Appfiesta" className="logo" />
+        </div>
+      </div>
+      <div className="footer">
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" style="margin: 10px; cursor: pointer;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+      </div>
+      </div>
+      {/* Cursor effect elements */}
+      {[...Array(20)].map((_, index) => (
+        <div key={index} className="circle"></div>
+      ))}
+    </div>
+  );
+}
+
+export default App;

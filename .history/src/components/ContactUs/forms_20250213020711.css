@@ -1,0 +1,44 @@
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.name-label,
+.email-label {
+    font-size: 20px;
+    font-family: turnkey-light;
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+}
+
+.field-input {
+    width: 100%;
+    font-size: 16px;
+    font-family: "Product Sans Light";
+    margin-top: 10px;
+    height: 40px;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid #36be00;
+    transition: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    
+}
+
+.contact-container{
+    width: 30%;
+}

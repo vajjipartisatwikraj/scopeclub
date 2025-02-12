@@ -1,0 +1,685 @@
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "turnkey-bold";
+  src: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\fonts\TurnkeyLite-Bold.otf)
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "turnkey-medium";
+  src: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\fonts\TurnkeyLite-Medium.otf)
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "turnkey-light";
+  src: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\fonts\TurnkeyLite-ExtraLight.otf)
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.green-container {
+  width: 100%;
+  height: 112vh;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-container {
+  position: relative; /* Needed for absolute positioning */
+  width: 95%;
+  height: 85%;
+  border-radius: 0px 0px 19.548px 19.548px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.33) 0%,
+    rgba(9, 16, 0, 0.37) 54.9%,
+    rgba(35, 63, 0, 0.5) 76.4%,
+    rgba(68, 124, 0, 0.5) 98.4%
+  );
+}
+
+.circle-light {
+  position: relative;
+  top: 30%;
+  left: 40%;
+  width: 20%;
+  height: 20%;
+  border-radius: 500px;
+  background-color: rgba(87, 201, 90, 0.5);
+  filter: blur(303.035400390625px);
+}
+
+.grid-image-left {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  bottom: 0%;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\Vector1.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.grid-image-right {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  bottom: 0%;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\Vector2.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  z-index: 2;
+}
+
+.top-layer {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  top: 30%;
+}
+
+.head {
+  font-family: turnkey-bold;
+  color: white;
+  font-size: 500%;
+  letter-spacing: -2px;
+  margin-bottom: 0px;
+}
+
+.highlighted {
+  font-family: turnkey-bold;
+  color: #36be00;
+}
+
+.caption {
+  margin-top: 1%;
+  font-family: turnkey-light;
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  width: 60%;
+  line-height: 154.513%; /* 25.29px */
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.hw-container {
+  margin-bottom: 3%;
+  width: 20%;
+  height: 8vh;
+  border-radius: 27.44px;
+  border: 0.61px solid #36be00;
+  box-shadow: 0px 0px 4.878px 2.439px rgba(54, 190, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+
+.hw-text {
+  font-family: turnkey-light;
+  font-size: 25px;
+  color: white;
+  margin: 0px;
+  width: fit-content;
+}
+
+.hw-arrow {
+  width: 20%;
+  height: 90%;
+  position: relative;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\arrow.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fontChange {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@keyframes expandCircle {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    opacity: 1;
+  }
+}
+
+div.circles {
+  width: 50%;
+  height: 10vh;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  left: 25%;
+  opacity: 0.3;
+}
+
+div.circle1,
+div.circle2,
+div.circle3 {
+  position: absolute;
+  border-radius: 50%;
+  animation: expandCircle 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Circle 1 */
+div.circle1 {
+  --circle-size: 300px;
+  background: rgba(0, 135, 4, 0.5);
+  animation-delay: 0s;
+}
+
+/* Circle 2 */
+div.circle2 {
+  --circle-size: 400px;
+  background: rgba(43, 145, 46, 0.2);
+  animation-delay: 0.15s;
+}
+
+/* Circle 3 */
+div.circle3 {
+  --circle-size: 500px;
+  background: rgba(43, 145, 46, 0.2);
+  animation-delay: 0.3s;
+}
+
+.inside-scope {
+  width: 100%;
+  height: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes expandBlurredCircle {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    filter: blur(0px);
+  }
+  to {
+    width: 40%;
+    height: 80%;
+    opacity: 1;
+    filter: blur(200px);
+  }
+}
+
+.is-circle-light {
+  position: absolute;
+  align-items: center;
+  z-index: 1;
+  height: 80%;
+  width: 40%;
+  border-radius: 500px;
+  background: rgba(51, 217, 11, 0.25);
+  filter: blur(200px);
+  opacity: 0; /* Initially hidden */
+  animation: expandBlurredCircle 1s ease-out forwards;
+  animation-play-state: paused; /* Pause the animation initially */
+}
+
+/* Use a scroll-based approach to trigger the animation */
+@media (prefers-reduced-motion: no-preference) {
+  .is-circle-light {
+    animation-play-state: running; /* Start the animation */
+    animation-timeline: view();
+  }
+}
+
+.is-top-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  z-index: 5;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.is-image {
+  width: 150%;
+  height: 50vh;
+  background-color: #36be00;
+}
+
+.is-contents {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.is-head {
+  font-family: turnkey-light;
+  color: white;
+  font-size: 5vw;
+  letter-spacing: -2px;
+  margin: 0px;
+}
+
+.is-caption {
+  width: 80%;
+  font-size: 18px;
+  color: white;
+  font-family: turnkey-light;
+  line-height: 30px; /* 150% */
+  letter-spacing: 0.05rem;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+}
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* Ensures it stays on top */
+  opacity: 0.8;
+  transition: transform 0.1s ease-out;
+}
+
+/*What do we do?*/
+
+.wdwd {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.wdwd-head {
+  font-size: 60px;
+  font-family: turnkey-light;
+  color: white;
+}
+
+.wdwd-main-container {
+  margin: 150px;
+  margin-top: 60px;
+}
+
+.wdwe-01-container,
+.wdwe-02-container,
+.wdwe-03-container {
+  display: flex;
+  align-items: center;
+  gap: 15%;
+}
+
+.wdwd-01-num,
+.wdwd-02-num,
+.wdwd-03-num {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #36be00;
+  color: transparent;
+  font-family: turnkey-bold;
+  font-size: 300px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: color 0.3s ease-in-out;
+}
+
+.wdwd-01,
+.wdwd-02,
+.wdwd-03 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wdwd-01-head,
+.wdwd-02-head,
+.wdwd-03-head {
+  width: fit-content;
+  padding-bottom: 10px;
+  color: #fff;
+  font-family: "FONTSPRING DEMO - Turnkey Medium";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-bottom: 4px solid #33d90b;
+  margin: 0px;
+}
+
+.wdwd-01-content,
+.wdwd-02-content,
+.wdwd-03-content {
+  color: #ffffffdb;
+  font-family: turnkey-light;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  letter-spacing: 0.05rem;
+}
+
+/*brand-events */
+
+.brand-events {
+  height: 70vh;
+  padding-top: 50px;
+  margin-bottom: 200px;
+  margin: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 0px;
+}
+
+.brand-events-top-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.brand-events-bottom-container {
+  padding-bottom: 100px;
+}
+
+.brand-events-head {
+  font-size: 60px;
+  font-family: turnkey-bold;
+  color: white;
+}
+
+.brand-events-caption {
+  color: #ffffffdb;
+  font-family: turnkey-light;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  letter-spacing: 0.05rem;
+}
+
+.logo-container {
+  width: 100%;
+  display: grid;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+}
+
+.line{
+  color: #808080;
+  height: 1px;
+  width: 100%;
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  height: 115%;
+  padding: 50px 200px 50px 200px;
+}
+
+
+.footer-bottom-container{
+  display: flex;
+  align-items: flex-start;
+  gap: 190px;
+  margin-top: 100px;
+}
+
+.footer-top-container{
+  width: 100%;
+  display: flex;
+  padding: 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding-bottom: 0px;
+}
+
+.scope,.mlrit{
+  width: 20%;
+  height: 7vh;
+  position: relative;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\scope.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mlrit{
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\mlrit.png);
+  height: 6vh;
+}
+
+.flwus-text,.writeus-text,.meet-text{
+  font-family: turnkey-medium;
+  font-size: 40px;
+  color: #33d90b;
+}
+
+.flwus-content,.writeus-content,.meet-content{
+  font-family: turnkey-light;
+  font-size: 17px;
+  color: #fff;
+  letter-spacing: 0.05rem;
+}
+
+.social{
+  display: flex;
+}
+
+.twitter,.instagram,.linkedin,.github{
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  fill: #fff;
+  cursor: pointer;
+}
+
+/* Desktop: 2x4 grid */
+@media (min-width: 1024px) {
+  .logo-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+/* Tablet: 3x3 grid */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  .circle {
+    visibility: hidden;
+  }
+}
+
+/* Mobile: 3x3 grid */
+@media (max-width: 768px) {
+  
+  
+  .green-container{
+    height: 100vh;
+  }
+
+  .hw-container {
+    height: 6vh;
+    width: 40%;
+    padding-right: 5px;
+  }
+
+  .top-layer{
+    top: 25%;
+  }
+
+  .head{
+    text-align: center;
+    margin-top: 5%;
+    font-size: 50px;
+    margin-bottom: 5%;
+    line-height: 55px;
+  }
+
+  .caption{
+    width: 80%;
+    font-size: 15px;
+  }
+
+
+  .hw-text {
+    font-size: 20px;
+  }
+
+  .inside-scope{
+    margin-top: 0%;
+  }
+
+  .is-head{
+    font-size: 13vw;
+  }
+
+  .is-caption{
+    font-size: 13px;
+    width: 100%;
+    line-height: 20px;
+    letter-spacing: 0.01rem;
+  }
+
+  .is-top-layer{
+    flex-direction: column;
+  }
+
+  .is-image{
+    height: 30vh;
+    width: 100%;
+  }
+  /* Circle 1 */
+  div.circle1 {
+    --circle-size: 300px;
+  }
+
+  /* Circle 2 */
+  div.circle2 {
+    --circle-size: 400px;
+  }
+
+  /* Circle 3 */
+  div.circle3 {
+    --circle-size: 500px;
+  }
+  .circle {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .wdwd-head{
+    font-size: 45px;
+  }
+
+  .wdwd-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 5%;
+  }
+
+  .wdwd-01-num,
+  .wdwd-02-num,
+  .wdwd-03-num {
+    font-size: 50px;
+    width: fit-content;
+    -webkit-text-stroke-width: 0.5px;
+  }
+
+  .wdwd-01-head,
+  .wdwd-02-head,
+  .wdwd-03-head {
+    font-family: turnkey-bold;
+    font-size: 30px;
+    border-bottom: 1px solid #33d90b;
+  }
+
+  .wdwd-01-content,
+  .wdwd-02-content,
+  .wdwd-03-content {
+    font-size: 13px;
+  }
+
+  .brand-events-head {
+    font-size: 37px;
+  }
+
+  .brand-events {
+    margin: 10px;
+    padding: 5%;
+  }
+
+  .brand-events-caption{
+    font-size: 13px;
+  }
+
+  .logo-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 25px;
+  }
+}
+

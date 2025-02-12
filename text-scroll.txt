@@ -1,0 +1,94 @@
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
+import Lenis from "@studio-freight/lenis";
+import "./App.css"; // Ensure styles are imported
+
+gsap.registerPlugin(ScrollTrigger);
+
+const App = () => {
+  const sectionsRef = useRef([]);
+
+  useEffect(() => {
+    sectionsRef.current.forEach((section) => {
+      const text = new SplitType(section, { types: "words" });
+
+      gsap.fromTo(
+        text.words,
+        {
+          scaleY: 0,
+          y: -20,
+          transformOrigin: "top",
+          opacity: 0,
+        },
+        {
+          scaleY: 1,
+          y: 0,
+          opacity: 1,
+          color: section.dataset.fgColor,
+          duration: 0.5,
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "top 20%",
+            scrub: true,
+            toggleActions: "play play reverse reverse",
+          },
+        }
+      );
+    });
+
+    const lenis = new Lenis();
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+
+    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  }, []);
+
+  return (
+    <div>
+      <section>
+        <h1>Scroll down for awesomeness.</h1>
+      </section>
+
+      <section style={{ background: "#cccccc" }}>
+        <p
+          className="reveal-type"
+          data-fg-color="teal"
+          ref={(el) => (sectionsRef.current[0] = el)}
+        >
+          Systematically ushering in a new generation of amazing designers from across the globe.
+        </p>
+      </section>
+
+      <section style={{ background: "#b6b600" }}>
+        <p
+          className="reveal-type"
+          data-fg-color="black"
+          ref={(el) => (sectionsRef.current[1] = el)}
+        >
+          Modern UI designers will expand their skillsets to include frontend.
+        </p>
+      </section>
+
+      <section style={{ background: "#353535" }}>
+        <p
+          className="reveal-type"
+          data-fg-color="red"
+          ref={(el) => (sectionsRef.current[2] = el)}
+        >
+          The web isn't static anymore, interactivity and motion now dominate.
+        </p>
+      </section>
+
+      <section></section>
+    </div>
+  );
+};
+
+export default App;

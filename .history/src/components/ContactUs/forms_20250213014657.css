@@ -1,0 +1,15 @@
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.name-label,
+.email-label {
+    font-size: 16px;
+    color: rgb(199, 0, 0);
+    padding: 0px;
+    margin: 0px;
+}

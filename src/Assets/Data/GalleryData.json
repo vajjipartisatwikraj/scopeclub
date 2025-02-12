@@ -1,0 +1,96 @@
+[
+    {
+        "id":1,
+        "img": "GalleryImg/Splash.JPG",
+        "eventName":"Splash"
+
+    },
+    {
+        "id":2,
+        "img": "GalleryImg/Splash1.JPG",
+        "eventName":"Splash"
+
+    },
+    {
+        "id":3,
+        "img": "GalleryImg/Splash2.JPG",
+        "eventName":"Splash"
+
+    },
+    {
+        "id":4,
+        "img": "GalleryImg/Splash3.JPG",
+        "eventName":"Splash"
+
+    },
+    {
+        "id":5,
+        "img": "GalleryImg/Splash4.JPG",
+        "eventName":"Splash"
+
+    },
+    {
+        "id":6,
+        "img": "GalleryImg/Splash5.JPG",
+        "eventName":"Splash"
+
+    },
+    {
+        "id":7,
+        "img": "GalleryImg/Interaction_2022.JPG",
+        "eventName":"Interaction Day 2022"
+
+    },
+    {
+        "id":8,
+        "img": "GalleryImg/Interaction2k224.JPG",
+        "eventName":"Interaction Day 2022"
+
+    },
+    {
+        "id":9,
+        "img": "GalleryImg/Gamehub2.o.JPG",
+        "eventName":"GameHub 2.0"
+
+    },
+    {
+        "id":10,
+        "img": "GalleryImg/Gamehub2.o1.JPG",
+        "eventName":"GameHub 2.0"
+
+    },
+    {
+        "id":11,
+        "img": "GalleryImg/Gamehub2.o2.JPG",
+        "eventName":"GameHub 2.0"
+
+    },
+    {
+        "id":12,
+        "img": "GalleryImg/Interaction2k225.JPG",
+        "eventName":"Interaction Day 2022"
+
+    },
+    {
+        "id":13,
+        "img": "GalleryImg/Interaction2k223.JPG",
+        "eventName":"Interaction Day 2022"
+
+    },
+    {
+        "id":14,
+        "img": "GalleryImg/Interaction2k222.JPG",
+        "eventName":"Interaction Day 2022"
+
+    },
+    {
+        "id":15,
+        "img": "GalleryImg/Interaction2k221.JPG",
+        "eventName":"Interaction Day 2022"
+
+    }
+
+    
+
+
+]

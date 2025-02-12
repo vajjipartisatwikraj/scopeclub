@@ -1,0 +1,76 @@
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.name-label,
+.email-label,
+.message-label {
+    font-size: 20px;
+    font-family: turnkey-light;
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+}
+
+.field-input {
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    font-family: "Product Sans Light";
+    margin-top: 10px;
+    height: 40px;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid #36be00;
+    transition: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    
+}
+
+.contact-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.field-input:focus {
+    outline: none;
+    border-bottom: 2px solid #33d90b;
+    transition: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.form-control.is-invalid:focus {
+    outline: none;
+    border-bottom: 2px solid #33d90b;
+    transition: none;
+    box-shadow: none;
+}
+
+
+.submit-btn {
+    width: 100%;
+    border-radius: 35px;
+    height: 70px;
+    font-size: 25px;
+    font-family: "Product Sans Medium";
+    color: black;
+    border: 1px solid black;
+    background-color: #33d90b;
+    display: grid;
+    place-items: center;
+    letter-spacing: 0.1rem;
+}

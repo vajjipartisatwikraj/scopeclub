@@ -1,0 +1,11 @@
+.teams-bod{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bod-container{
+    width: 10%;
+    height: 40%;
+    border: 1px solid #ffff;
+}

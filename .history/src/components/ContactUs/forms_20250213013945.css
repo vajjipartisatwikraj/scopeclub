@@ -1,0 +1,140 @@
+.contact-container {
+    width: 100%;
+    position: relative;
+    background-color: #092330;
+    height: 100vh;
+    overflow: hidden;
+    text-align: left;
+    font-size: 30px;
+    color: #fff;
+    font-family: "Product Sans Light";
+}
+
+.contact-boxes {
+    position: relative;
+    left: 18%;
+}
+
+.contact-child {
+    position: absolute;
+    top: -293.41px;
+    left: 538.53px;
+    box-shadow: 20px 4px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 295px;
+    background-color: #328f1b;
+    width: 100%;
+    height: 1082.1px;
+    transform: rotate(11.9deg);
+    transform-origin: 0 0;
+}
+
+.contact-item {
+    position: absolute;
+    top: -266.23px;
+    left: 599.69px;
+    box-shadow: 20px 4px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 295px;
+    background-color: #33d90b;
+    width: 936px;
+    height: 1040px;
+    transform: rotate(15.8deg);
+    transform-origin: 0 0;
+}
+
+.contact-inner {
+    position: absolute;
+    top: -277px;
+    left: 694.79px;
+    box-shadow: 20px 4px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 295px;
+    background-color: #fff;
+    width: 936px;
+    height: 1040px;
+    transform: rotate(21.1deg);
+    transform-origin: 0 0;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 70px;
+    font-size: 18px;
+    left: 63%;
+    display: grid;
+    place-items: center;
+}
+
+.contact-head {
+    text-align: center;
+    color: black;
+    width: 110px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-family: "Product Sans Medium";
+    border-bottom: 4px solid #33d90b;
+    width: max-content;
+}
+
+.name-parent,
+.email-parent,
+.message-parent,
+.submit-btn-parent {
+    width: 100%;
+}
+
+.name-label,
+.email-label,
+.message-label {
+    font-size: 16px;
+    font-family: "Product Sans Medium";
+    letter-spacing: 0.1rem;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.field-input,
+.textarea-input {
+    width: 100%;
+    font-size: 16px;
+    font-family: "Product Sans Light";
+    margin-top: 10px;
+    height: 40px;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+    transition: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.textarea-input {
+    height: 100px;
+    resize: none;
+}
+
+.field-input:focus,
+.textarea-input:focus {
+    outline: none;
+    border-bottom: 2px solid #33d90b;
+    transition: none;
+    box-shadow: none;
+}
+
+.submit-btn {
+    width: 100%;
+    border-radius: 35px;
+    height: 70px;
+    font-size: 25px;
+    font-family: "Product Sans Medium";
+    color: black;
+    border: 1px solid black;
+    background-color: #33d90b;
+    display: grid;
+    place-items: center;
+    letter-spacing: 0.1rem;
+}

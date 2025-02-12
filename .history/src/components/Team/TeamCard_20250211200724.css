@@ -1,0 +1,126 @@
+.containner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+.containner .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(4px);
+  border-top: 2px solid rgba(255, 255, 255, 0.25);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.containner .card .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  transition: 0.5s;
+}
+.containner .card:hover .content {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.containner .card .content .imgBx {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+
+.containner .card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.containner .card .content .contentBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.containner .card .content .contentBx h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.containner .card .sci {
+  position: absolute;
+  display: flex;
+  bottom: 50px;
+}
+
+.containner .card .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+}
+.containner .card .sci li a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.containner .card:hover .sci li {
+  transform: translateY(0);
+  opacity: 1;
+}
+.containner .card .sci li:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.containner .card .sci li:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+
+/*Changes */
+
+
+.git{
+  margin-top: 100px;
+  height: 100%;
+  position: relative;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\arrow.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+a{
+  cursor: pointer;
+  display: block;
+  width: 50px;
+  height: 50px;
+}

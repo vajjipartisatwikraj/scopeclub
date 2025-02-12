@@ -1,0 +1,34 @@
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.name-label,
+.email-label {
+    font-size: 16px;
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+}
+
+.field-input {
+    width: 40%;
+    font-size: 16px;
+    font-family: "Product Sans Light";
+    margin-top: 10px;
+    height: 40px;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid #36be00;
+    transition: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+}
+
+.form-container{
+    width: 100vw;
+}

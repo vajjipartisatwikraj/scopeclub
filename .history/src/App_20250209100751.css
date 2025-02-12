@@ -1,0 +1,20 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+.green-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-container{
+  width: 95%;
+  height: 85%;
+  border-radius: 0px 0px 19.548px 19.548px;
+  border: 0.674px solid rgba(56, 56, 56, 0.90);
+
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%, rgba(9, 16, 0, 0.37) 54.9%, rgba(35, 63, 0, 0.50) 76.4%, rgba(68, 124, 0, 0.50) 98.4%);
+}

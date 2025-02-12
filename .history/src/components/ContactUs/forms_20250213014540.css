@@ -1,0 +1,18 @@
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.name-label {
+    text-align: center;
+    color: black;
+    width: 110px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-family: "Product Sans Medium";
+    border-bottom: 4px solid #33d90b;
+    width: max-content;
+}

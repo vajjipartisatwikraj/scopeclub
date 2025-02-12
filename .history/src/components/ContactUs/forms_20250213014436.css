@@ -1,0 +1,9 @@
+.contact-container{
+    width: 500%;
+}
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,339 @@
+.login-boxes {
+    position: relative;
+    left: 18%;
+}
+
+.login-child {
+    position: absolute;
+    top: -293.41px;
+    left: 538.53px;
+    box-shadow: 20px 4px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 295px;
+    background-color: #328f1b;
+    width: 100%;
+    height: 1082.1px;
+    transform: rotate(11.9deg);
+    transform-origin: 0 0;
+}
+
+.login-item {
+    position: absolute;
+    top: -266.23px;
+    left: 599.69px;
+    box-shadow: 20px 4px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 295px;
+    background-color: #33d90b;
+    width: 936px;
+    height: 1040px;
+    transform: rotate(15.8deg);
+    transform-origin: 0 0;
+}
+
+.login-inner {
+    position: absolute;
+    top: -277px;
+    left: 694.79px;
+    box-shadow: 20px 4px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 295px;
+    background-color: #fff;
+    width: 936px;
+    height: 1040px;
+    transform: rotate(21.1deg);
+    transform-origin: 0 0;
+}
+
+.login-container {
+    width: 100%;
+    position: relative;
+    background-color: #092330;
+    height: 100vh;
+    overflow: hidden;
+    text-align: left;
+    font-size: 90px;
+    color: #fff;
+    font-family: "Product Sans Light";
+}
+
+.welcome-container {
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    top: 70px;
+    left: 80px;
+}
+
+.back-btn {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.back-arrow {
+    height: 50px;
+    width: 50px;
+    background-image: url(C:\Users\SATWIK\OneDrive\Desktop\orbit\frontend\my-app\public\images\back-arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.back-msg {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Product Sans Regular";
+}
+
+.welcome-notes {
+    margin-top: 100px;
+}
+
+.welcome-head {
+    font-size: 90px;
+    font-family: "Product Sans Light";
+    line-height: 6rem;
+}
+
+.welcome-caption {
+    margin-top: 20px;
+    font-size: 23px;
+    font-family: Product Sans;
+    font-weight: 100;
+}
+
+.signup-form-container,
+.login-form-container,
+.verifyotp-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 70px;
+    font-size: 18px;
+    left: 63%;
+    display: grid;
+    place-items: center;
+}
+
+.signup-head,
+.login-head,
+.verifyotp-head {
+    text-align: center;
+    color: black;
+    width: 110px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-family: "Product Sans Medium";
+    border-bottom: 4px solid #33d90b;
+    width: max-content;
+}
+
+.login-head {
+    margin-bottom: 0px;
+}
+
+.username-parent,
+.password-parent,
+.email-parent,
+.roles-parent,
+.checkbox-parent,
+.login-btn-parent,
+.checkbox-parent {
+    width: 100%;
+}
+
+.username-label,
+.password-label,
+.email-label {
+    font-size: 16px;
+    font-family: "Product Sans Medium";
+    letter-spacing: 0.1rem;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.field-input {
+    width: 100%;
+    font-size: 16px;
+    font-family: "Product Sans Light";
+    margin-top: 10px;
+    height: 40px;
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+    transition: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.field-input:focus {
+    outline: none;
+    border-bottom: 2px solid #33d90b;
+    transition: none;
+    box-shadow: none;
+}
+
+.form-control.is-invalid:focus {
+    outline: none;
+    border-bottom: 2px solid #33d90b;
+    transition: none;
+    box-shadow: none;
+}
+
+.roles-parent {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.form-check-input {
+    height: 18px;
+    width: 18px;
+}
+
+.form-check-label {
+    font-size: 16px;
+    font-family: "Product Sans";
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.checkbox-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: baseline;
+}
+
+.invalid-feedback,
+.text-danger {
+    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.text-danger.mt-1{
+    padding: 0px;
+    margin: 0px;
+}
+
+.terms {
+    color: #434343;
+    font-size: 14px;
+}
+
+.form-check-input {
+    border: 1px solid black;
+}
+
+.form-check-input:checked {
+    background-color: #33d90b;
+    border-color: #33d90b;
+}
+
+.signup-btn,
+.login-btn,
+.verify-btn {
+    width: 100%;
+    border-radius: 35px;
+    height: 70px;
+    font-size: 25px;
+    font-family: "Product Sans Medium";
+    color: black;
+    border: 1px solid black;
+    background-color: #33d90b;
+    display: grid;
+    place-items: center;
+    letter-spacing: 0.1rem;
+}
+
+.signup-link {
+    color: black;
+    font-size: 25px;
+    font-family: "Product Sans Medium";
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+
+}
+
+.otp-info {
+    width: 450px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Product Sans;
+    font-weight: 300;
+    color: #434343;
+}
+
+.highlighted3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.otp {
+    width: 100%;
+    height: 100px;
+}
+
+.resend-time {
+    font-weight: 200;
+    color: #434343;
+}
+
+.reset-time {
+    font-family: Product Sans;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.otp-container {
+    text-align: center;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.otp-box {
+    width: 70px;
+    height: 80px;
+    font-size: 40px;
+    font-family: Product Sans;
+    font-weight: 500;
+    color: #434343;
+    text-align: center;
+    border-radius: 18px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.otp-box:focus {
+    border: 5px solid #33d90b80;
+}
+
+.error-message {
+    color: red;
+    margin: 0px;
+    padding: 0px;
+}
+
+.resend {
+    color: #434343;
+    font-size: 20px;
+}
+
+.resend-link {
+    font-family: Product Sans;
+    font-weight: 300;
+    color: #33d90b;
+    text-decoration: underline;
+}
