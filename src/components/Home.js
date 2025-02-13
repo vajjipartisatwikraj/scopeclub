@@ -141,7 +141,7 @@ function Home() {
         </div>
         <div className="brand-events-bottom-container">
         <div className="logo-container">
-          <img src={`${process.env.PUBLIC_URL}/images/zenith.png`} alt="Zenith" className="logo" />
+          <img src={`./images/zenith.png`} alt="Zenith" className="logo" />
           <img src={`${process.env.PUBLIC_URL}/images/webmania.png`} alt="Webmania" className="logo" />
           <img src={`${process.env.PUBLIC_URL}/images/modifest.png`} alt="Modifest" className="logo" />
           <img src={`${process.env.PUBLIC_URL}/images/spotlight.png`} alt="Spotlight" className="logo" style={{ height: '50px' }} />
