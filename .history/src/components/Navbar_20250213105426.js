@@ -43,7 +43,7 @@ function Navbar() {
           <div className="collapse navbar-collapse order-lg-3" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0 nav-bar d-flex justify-content-around">
               <li className="nav-item">
-                <Link className="nav-link active" to="/home">Home</Link>
+                <Link className="nav-link active" to="/">Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/teams">Team</Link>
@@ -52,7 +52,7 @@ function Navbar() {
                 <Link className="nav-link" to="/events">Events</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/resources">Resources</Link>
+                <Link className="nav-link" to="/resources">Gallery</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">Contact Us</Link>
