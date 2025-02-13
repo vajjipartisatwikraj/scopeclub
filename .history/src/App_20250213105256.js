@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Teams from './components/Team/Team'; 
+import Teams from './components/Team/Team';
 import Events from './components/Events/Events';
 import Resources from './components/Resources';
 import './App.css';
