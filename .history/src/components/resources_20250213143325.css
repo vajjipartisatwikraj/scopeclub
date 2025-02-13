@@ -1,0 +1,15 @@
+.resources{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rs-head{
+    font-family: turnkey-bold;
+  color: white;
+  font-size: 5rem;
+  letter-spacing: -2px;
+  margin-bottom: 0px;
+}

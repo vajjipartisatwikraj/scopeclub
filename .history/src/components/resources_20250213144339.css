@@ -1,0 +1,40 @@
+.resources {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rs-head {
+  font-family: turnkey-bold;
+  color: white;
+  font-size: 5rem;
+  letter-spacing: -2px;
+  margin-bottom: 0px;
+}
+
+.rs-caption {
+  margin-top: 1%;
+  font-family: turnkey-light;
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  width: 60%;
+  line-height: 154.513%; /* 25.29px */
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.bottom-image {
+  position: absolute;
+  top: -150px;
+  height: 130vh;
+  width: 100%;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\circles.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -10;
+}
