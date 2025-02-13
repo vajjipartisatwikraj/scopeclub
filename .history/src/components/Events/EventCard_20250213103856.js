@@ -2,7 +2,7 @@ import "./EventCard.css";
 import { motion } from "framer-motion";
 
 function EventCard(props) {
-  const imageUrl = `url(${process.env.PUBLIC_URL}/${props.image})`; // Assuming props.image is a valid path
+  const imageUrl = `url(${props.image})`; // Assuming props.image is a valid path
 
   return (
     <motion.div

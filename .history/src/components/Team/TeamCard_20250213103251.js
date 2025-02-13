@@ -8,7 +8,7 @@ function TeamCard(props) {
       <div class="card">
         <div class="content">
           <div class="imgBx">
-            <img  src={`${process.env.PUBLIC_URL}/${props.image}`} alt={props.name} />
+            <img  src={`${process.env.PUBLIC_URL}${props.image}`} alt={props.name} />
           </div>
           <div class="contentBx">
             <h3 className="member-name">

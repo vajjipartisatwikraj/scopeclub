@@ -2,8 +2,7 @@ import "./EventCard.css";
 import { motion } from "framer-motion";
 
 function EventCard(props) {
-  const imageUrl = `url(${process.env.PUBLIC_URL}/${props.image})`; // Assuming props.image is a valid path
-
+  const imageUrl = `url(${props.image})`;
   return (
     <motion.div
       layout
@@ -15,13 +14,13 @@ function EventCard(props) {
       <div className="events">
         <div className="events-container">
           <div className="event">
-            <article className="EventCard mix">
-              <div className="thumb" style={{ backgroundImage: imageUrl }} />
+            <article className="EventCard mix ">
+              <div className="thumb" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${imageUrl})`}} />
               <div className="infos">
-                <div className="thumb" style={{ backgroundImage: imageUrl }} />
+                <div className="thumb"  style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${imageUrl})` }} />
               </div>
             </article>
-            <div className="information">
+            <div className="information"> 
               <div className="event-card-inner-container">
                 <h2 className="title">
                   <span className="ellipss">{props.title}</span>
@@ -30,7 +29,7 @@ function EventCard(props) {
                 <h3 className="detail">{props.venue}</h3>
                 <p className="txt">{props.desc}</p>
               </div>
-              <a href="/" className="details" target="_blank" rel="noopener noreferrer">
+              <a href="/" className="details" target="_blank">
                 More Info
               </a>
             </div>
