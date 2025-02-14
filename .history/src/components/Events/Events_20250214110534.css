@@ -93,7 +93,7 @@
   }
   .but {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -106,7 +106,6 @@
   }
 }
 @media (max-width: 450px){
-
   .events-h{
     font-size: 3rem;
     line-height: 1;

@@ -1,3 +1,14 @@
+.resources {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 .rs-head {
   font-family: turnkey-bold;
   color: white;
@@ -80,7 +91,7 @@
 .rs-body {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 85%;
   height: 100%;
   background-color: black;
   padding: 1%;
@@ -145,20 +156,28 @@
   margin-bottom: 10%;
 }
 
-.resource-section{
-  width: 100vw;
-  overflow-x: scroll;
+.ResourceCard-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 50px;
 }
 
+.ResourceCard.mix{
+  width: 350px;
+}
 .tech-list{
   display: flex;
-  width: fit-content;
+  width: 100%;
   gap: 5%;
   overflow-x: scroll;
 }
 
 @media screen and (max-width: 600px) {
   
+  
+
   .dropdown{
     width: 65%;
     font-size: 1.2rem;
@@ -208,7 +227,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100vw;
   }
   .btn41-44 {
     padding: 8px 30px;
@@ -221,7 +239,7 @@
 @media (max-width: 450px) {
 
   .ResourceCard{
-    width: fit-content;
+    width: 100%;
   }
 
   .events-h {

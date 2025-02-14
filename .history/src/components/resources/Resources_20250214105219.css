@@ -1,3 +1,4 @@
+
 .rs-head {
   font-family: turnkey-bold;
   color: white;
@@ -147,12 +148,12 @@
 
 .resource-section{
   width: 100vw;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .tech-list{
   display: flex;
-  width: fit-content;
+  width: 100%;
   gap: 5%;
   overflow-x: scroll;
 }

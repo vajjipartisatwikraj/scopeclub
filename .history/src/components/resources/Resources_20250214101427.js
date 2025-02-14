@@ -84,6 +84,7 @@ function Resources() {
               ))}
             </select>
           </div>
+          <div className="ResourceCards-container">
             {Object.entries(resources).map(([section, technologies]) => (
               <div key={section} className="resource-section">
                 <h3 className="section-title">{section}</h3>
@@ -101,6 +102,7 @@ function Resources() {
                 </div>
               </div>
             ))}
+          </div>
         </div>
       </div>
     </div>

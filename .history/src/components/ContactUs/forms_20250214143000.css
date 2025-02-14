@@ -24,7 +24,7 @@
   border-radius: 0px;
   border-bottom: 1px solid #36be00;
   transition: none;
-  padding: 20px 0px;
+  padding: 0px;
   margin: 0px;
   background-color: transparent;
 }
@@ -99,6 +99,7 @@ textarea::placeholder {
     color: red;
     opacity: 0.5;
     margin: 0px;
+
     margin-top: 5px;
     padding: 0px;
 }
@@ -134,7 +135,7 @@ textarea::placeholder {
   }
 
   .cu-caption{
-    width: 80%;
+    width: 100%;
   }
 
   .contactus-container{

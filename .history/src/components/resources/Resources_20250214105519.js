@@ -84,9 +84,10 @@ function Resources() {
               ))}
             </select>
           </div>
+          <h3 className="section-title">{section}</h3>
             {Object.entries(resources).map(([section, technologies]) => (
               <div key={section} className="resource-section">
-                <h3 className="section-title">{section}</h3>
+                
                 <div className="tech-list">
                   {Object.entries(technologies).map(([tech, details]) => (
                     <ResourceCard

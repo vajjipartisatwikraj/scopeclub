@@ -106,7 +106,10 @@
   }
 }
 @media (max-width: 450px){
-
+  .but{
+    display: block;
+    flex-direction: column;
+  }
   .events-h{
     font-size: 3rem;
     line-height: 1;

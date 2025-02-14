@@ -1,3 +1,4 @@
+
 .rs-head {
   font-family: turnkey-bold;
   color: white;
@@ -80,7 +81,7 @@
 .rs-body {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 85%;
   height: 100%;
   background-color: black;
   padding: 1%;
@@ -146,13 +147,13 @@
 }
 
 .resource-section{
-  width: 100vw;
+  width: fit-content;
   overflow-x: scroll;
 }
 
 .tech-list{
   display: flex;
-  width: fit-content;
+  width: 95%;
   gap: 5%;
   overflow-x: scroll;
 }
@@ -208,7 +209,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100vw;
   }
   .btn41-44 {
     padding: 8px 30px;
