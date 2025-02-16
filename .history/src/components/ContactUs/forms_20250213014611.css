@@ -1,0 +1,18 @@
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.name-label,
+.password-label,
+.email-label {
+    font-size: 16px;
+    font-family: "Product Sans Medium";
+    letter-spacing: 0.1rem;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}

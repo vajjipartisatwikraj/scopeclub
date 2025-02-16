@@ -1,0 +1,10 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+.green-container{
+  width: 50%;
+  height: 85vh;
+  background-color: antiquewhite;
+}

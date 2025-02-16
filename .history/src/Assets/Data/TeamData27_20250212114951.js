@@ -1,0 +1,211 @@
+export const t27 = [
+  {
+    id: 0,
+    name: "Vaibhav",
+    position: "Joint Secretary",
+    alt: "Vaibhav",
+    image: "Team/t27/Vaibhav.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 1,
+    name: "Pranadeep Reddy",
+    position: "Technical Lead",
+    alt: "Pranadeep Reddy",
+    image: "Team/t27/Pranadeep.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 2,
+    name: "Geethika",
+    position: "Graphic Designing Lead",
+    alt: "Geethika",
+    image: "Team/t27/Geethika.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 3,
+    name: "Harshith Reddy",
+    position: "Promotions Lead",
+    alt: "Harshith Reddy",
+    image: "Team/t27/Harshith.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 4,
+    name: "Sri Harsh",
+    position: "Photography and VideoGraphy Lead",
+    alt: "Sri Harsh",
+    image: "Team/t27/Harsh.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 5,
+    name: "Priya",
+    position: "Operations Lead",
+    alt: "Priya",
+    image: "Team/t27/Priya.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 6,
+    name: "GVNSS.Vignesh",
+    position: "Technical Member",
+    alt: "Vignesh",
+    image: "Team/t27/Vignesh.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 7,
+    name: "Vedansh Sharma",
+    position: "Technical Member",
+    alt: "Vedansh Sharma",
+    image: "Team/t27/Vedansh.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 8,
+    name: "Sathwik Raj",
+    position: "Technical Member",
+    alt: "Geethika",
+    image: "Team/t27/Sathwik Raj.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  
+  {
+    id: 9,
+    name: "Venila",
+    position: "Graphic Designer",
+    alt: "Venila",
+    image: "Team/t27/Venila.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 10,
+    name: "Karthik Reddy",
+    position: "Content Writing",
+    alt: "Karthik Reddy",
+    image: "Team/t27/Karthik Reddy.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  
+  {
+    id: 11,
+    name: "Neha Bingi",
+    position: "Promotions",
+    alt: "Neha Bingi",
+    image: "Team/t27/Neha.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 12,
+    name: "Pravallika",
+    position: "Promotions",
+    alt: "Pravallika",
+    image: "Team/t27/Pravallika.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  
+  {
+    id: 13,
+    name: "Rekha Sai Sree",
+    position: "Photography",
+    alt: "Rekha Sai Sree",
+    image: "Team/t27/Rekha.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 14,
+    name: "Jai Hrushikesh",
+    position: "Photography",
+    alt: "Jai Hrushikesh",
+    image: "Team/t27/Hrushikesh.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  {
+    id: 15,
+    name: "Preetham",
+    position: "Video Editing",
+    alt: "Preetham",
+    image: "Team/t27/Preetham.jpg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+  
+  {
+    id: 16,
+    name: "Yogitha",
+    position: "Operations",
+    alt: "Sravya Lingisetty",
+    image: "Team/t27/Yogitha.jpeg",
+    socials: {
+      github: "",
+      instagram: "",
+      linkedin: "",
+    },
+  },
+
+];

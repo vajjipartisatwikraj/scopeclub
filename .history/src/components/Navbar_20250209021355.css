@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+
+nav{
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+ul.navbar-nav.mx-auto.mb-2.mb-lg-0.nav-bar {
+    border: 1px solid white;
+    border-radius: 100px;
+    width: 40%;
+    color: white;
+}
+
+a.nav-link, a.nav-link.active{
+    color: white;
+}
+

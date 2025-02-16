@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/scopeclub/static/css/main.68cd40ab.css",
+    "main.js": "/scopeclub/static/js/main.9e644672.js",
+    "static/js/488.9c92ff38.chunk.js": "/scopeclub/static/js/488.9c92ff38.chunk.js",
+    "static/media/circles.png": "/scopeclub/static/media/circles.7ebc85b4759ee0bbfdf0.png",
+    "static/media/scope.png": "/scopeclub/static/media/scope.baaed1ae44ef41b66218.png",
+    "static/media/mlrit.png": "/scopeclub/static/media/mlrit.86c5c4e6c8ae8e7531ea.png",
+    "static/media/scope-logo.png": "/scopeclub/static/media/scope-logo.e4e29aca53e180e89c03.png",
+    "static/media/Vector1.png": "/scopeclub/static/media/Vector1.16731aa83fdb38fe57dd.png",
+    "static/media/Vector2.png": "/scopeclub/static/media/Vector2.f799d5269215882fa1b7.png",
+    "static/media/MADEOuterSansBoldPERSONALUSE.otf": "/scopeclub/static/media/MADEOuterSansBoldPERSONALUSE.58a38b29014f3a369042.otf",
+    "static/media/arrow.png": "/scopeclub/static/media/arrow.9d5e5d34565db73b13f5.png",
+    "static/media/TurnkeyLite-Bold.otf": "/scopeclub/static/media/TurnkeyLite-Bold.6d2ae34290d8f17d20f2.otf",
+    "static/media/TurnkeyLite-ExtraLight.otf": "/scopeclub/static/media/TurnkeyLite-ExtraLight.987e0a3ee879e159ea3b.otf",
+    "static/media/TurnkeyLite-Medium.otf": "/scopeclub/static/media/TurnkeyLite-Medium.3b2785e8837f3248616f.otf",
+    "index.html": "/scopeclub/index.html",
+    "main.68cd40ab.css.map": "/scopeclub/static/css/main.68cd40ab.css.map",
+    "main.9e644672.js.map": "/scopeclub/static/js/main.9e644672.js.map",
+    "488.9c92ff38.chunk.js.map": "/scopeclub/static/js/488.9c92ff38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68cd40ab.css",
+    "static/js/main.9e644672.js"
+  ]
+}

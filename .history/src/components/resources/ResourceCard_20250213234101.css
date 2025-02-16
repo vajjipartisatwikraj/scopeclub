@@ -1,0 +1,187 @@
+.ResourceCard {
+  width: 350px;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-size: 16px;
+  border: 1px solid white;
+}
+.ResourceCard .thumb {
+  width: auto;
+  height: 400px;
+  background-size:cover;
+  background-position:  center;
+  border-radius: 3px;
+}
+.ResourceCard .infos {
+  width: auto;
+  height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  transition: 0.6s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+.ResourceCard .title {
+  padding-right: 40px;
+}
+.ResourceCard .infos .title {
+  position: relative;
+  margin: 7px 0;
+  letter-spacing: 2px;
+  color: #152536;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-shadow: 0 0 0px #32577f;
+}
+.ResourceCard .infos .time {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* width: 35px; */
+  text-transform: none;
+  height: 23px;
+  font-size: 0.9em;
+  color: rgba(67, 83, 100, 0.7);
+  background-size: 100% auto;
+  display: inline-block;
+}
+.ResourceCard .infos .detail {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  color: rgba(21, 37, 54, 0.7);
+}
+.ResourceCard .infos .txt {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 13px;
+  line-height: 2;
+  font-size: 0.95em;
+  color: rgba(21, 37, 54, 0.7);
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+.ResourceCard .infos .details {
+  padding-bottom: 19px;
+  letter-spacing: 1px;
+  color: #4e958b;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+.ResourceCard .ellipss {
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5em;
+  max-height: 3em;
+}
+
+.ResourceCard:hover .ellipss {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-height: 1.5em;
+  max-height: 7.5em;
+}
+.ResourceCard:hover .infos {
+  -webkit-transform: translateY(-400px);
+  transform: translateY(-400px);
+}
+
+.ResourceCard:hover .infos {
+  overflow-y: auto;
+}
+
+.ResourceCard .infos::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ResourceCard .infos::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+.ResourceCard .infos::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.ResourceCard:hover .infos .seats,
+.ResourceCard:hover .infos .txt,
+.ResourceCard:hover .infos .details {
+  opacity: 1;
+}
+.ResourceCard {
+  text-align: left;
+}
+
+.past,
+.upcoming {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .ResourceCard {
+    width: 300px;
+    height: 440px;
+    font-size: 15px;
+  }
+  .ResourceCard .thumb {
+    height: 300px;
+  }
+
+  .ResourceCard .infos {
+    height: 440px;
+  }
+  .ResourceCard .infos .title {
+    margin: 13px 0;
+  }
+  .ResourceCard .infos .time {
+    font-size: 0.83em;
+  }
+  .ResourceCard .infos .detail {
+    font-size: 0.82em;
+  }
+  .ResourceCard .infos .txt {
+    font-size: 0.85em;
+  }
+
+  .ResourceCard:hover .infos {
+    -webkit-transform: translateY(-300px);
+    transform: translateY(-300px);
+  }
+
+
+
+
+}
+
+
+.ResourceCard-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 50px;
+}
+
+.tech-list{
+  display: flex;
+  width: 100%;
+  gap: 50px;
+  overflow-x: scroll;
+}

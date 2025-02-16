@@ -1,0 +1,141 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-label,
+.email-label,
+.message-label {
+  font-size: 20px;
+  font-family: turnkey-light;
+  color: #fff;
+  padding: 0px;
+  margin: 0px;
+}
+
+.field-input {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  font-family: "Product Sans Light";
+  margin-top: 10%;
+  height: 25px;
+  border: 0px;
+  border-radius: 0px;
+  border-bottom: 1px solid #36be00;
+  transition: none;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.contact-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 20%;
+}
+
+.field-input:focus {
+  outline: none;
+  border-bottom: 2px solid #33d90b;
+  transition: none;
+  box-shadow: none;
+  background: transparent;
+  color: #fff;
+}
+
+.form-control.is-invalid:focus {
+  outline: none;
+  border-bottom: 2px solid #33d90b;
+  transition: none;
+  box-shadow: none;
+}
+
+.submit-btn {
+  width: 100%;
+  border-radius: 35px;
+  height: 70px;
+  font-size: 25px;
+  font-family: turnkey-medium;
+  color: black;
+  border: 1px solid black;
+  background-color: #33d90b;
+  display: grid;
+  place-items: center;
+}
+
+input,
+textarea {
+  color: white; /* Text color */
+  font-size: 16px; /* Font size */
+  font-weight: 500; /* Font weight */
+  font-family: "Arial", sans-serif; /* Font family */
+}
+
+input:not(:placeholder-shown) {
+  background-color: transparent !important; /* Light blue background */
+}
+
+input::placeholder {
+  color: rgb(66, 66, 66)!important;
+  font-size: 16px;
+}
+
+textarea::placeholder {
+    color: rgb(66, 66, 66)!important;
+    font-size: 16px;
+  }
+
+.error-message {
+    color: red;
+    opacity: 0.5;
+    margin: 0px;
+
+    margin-top: 5px;
+    padding: 0px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .Events {
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+  }
+  .events-h {
+    font-size: 3.75rem;
+  }
+  .but {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn41-44 {
+    padding: 8px 30px;
+  }
+
+  .btn41-45 {
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 450px){
+
+  .contactus-container{
+    padding: 10px;
+    margin: 200px 0px;
+
+  }
+  .contactus-head{
+    font-size: 40px;
+  }
+}

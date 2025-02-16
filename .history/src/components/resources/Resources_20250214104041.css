@@ -1,0 +1,242 @@
+.resources {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.rs-head {
+  font-family: turnkey-bold;
+  color: white;
+  font-size: 5rem;
+  letter-spacing: -2px;
+  margin-bottom: 0px;
+}
+
+.rs-caption {
+  font-family: turnkey-light;
+  font-size: 1rem;
+  font-weight: 100;
+  color: white;
+  width: 45%;
+  line-height: 154.513%; /* 25.29px */
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.bottom-image {
+  position: absolute;
+  top: 8%;
+  height: 130vh;
+  width: 90%;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\circles.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.hw1-container {
+  margin-top: 5%;
+  width: 10%;
+  height: 4vh;
+  border-radius: 27.44px;
+  border: 0.61px solid #36be00;
+  box-shadow: 0px 0px 4.878px 2.439px rgba(54, 190, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+
+.hw1-text {
+  font-family: turnkey-light;
+  font-size: 1rem;
+  color: white;
+  margin: 0px;
+  width: fit-content;
+  text-overflow: ellipsis;
+}
+
+.hw1-arrow {
+  width: 10%;
+  height: 100%;
+  position: relative;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\arrow.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rs-top-layer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100vh;
+  gap: 10px;
+  width: 100vw;
+}
+
+.rs-body {
+  display: flex;
+  flex-direction: column;
+  width: 5%;
+  height: 100%;
+  background-color: black;
+  padding: 1%;
+}
+
+.dropdown {
+  width: 30%;
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 30px;
+  border: 2px solid #33d90b;
+  border-radius: 100px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  appearance: none; /* Hides default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 40px;
+  padding-right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover {
+  border-color: #33d90b;
+}
+
+.dropdown:focus {
+  border-color: #33d90b;
+  box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
+}
+
+.dropdown option {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.section-title {
+  color: #fff;
+  width: fit-content;
+  font-family: turnkey-medium;
+  font-size: 40px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-bottom: 3px solid #33d90b;
+}
+
+.rs-dropdown{
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+
+.resource-section{
+  width: 500px;
+  overflow-x: scroll;
+}
+
+.tech-list{
+  display: flex;
+  width: 100%;
+  gap: 5%;
+  overflow-x: scroll;
+}
+
+@media screen and (max-width: 600px) {
+  
+  .dropdown{
+    width: 65%;
+    font-size: 1.2rem;
+  }
+
+  .dropdown option{
+    font-size: 1rem
+  }
+  .bottom-image{
+    top:  150px;
+    width: 390px;
+    height: 390px;
+  }
+
+  .cu-circle-light{
+    position: relative;
+    z-index: 10 !important;
+  }
+
+  .rs-top-layer{
+    gap: 10px;
+  }
+  
+.hw1-container {
+  width: 150px;
+  height: 30px;
+}
+
+.rs-head{
+  font-size: 3rem;
+}
+
+.rs-caption{
+  font-size: 10px;
+  width: 90%;
+}
+  .Events {
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+  }
+  .events-h {
+    font-size: 3.75rem;
+  }
+  .but {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn41-44 {
+    padding: 8px 30px;
+  }
+
+  .btn41-45 {
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 450px) {
+
+  .ResourceCard{
+    width: fit-content;
+  }
+
+  .events-h {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}

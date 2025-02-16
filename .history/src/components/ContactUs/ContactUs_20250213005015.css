@@ -1,0 +1,19 @@
+.contactus{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactus-container{
+
+}
+
+.head {
+  font-family: turnkey-bold;
+  color: white;
+  font-size: 500%;
+  letter-spacing: -2px;
+  margin-bottom: 0px;
+}
