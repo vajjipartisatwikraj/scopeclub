@@ -1,0 +1,565 @@
+{
+  "Web Dev": {
+    "Basic": {
+      "HTML": {
+        "title": "HTML",
+        "desc": "The standard markup language for creating web pages.",
+        "nlink": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        "vlink": "https://www.youtube.com/watch?v=pQN-pnXPaVg",
+        "image": "/Resources/html.png"
+      },
+      "CSS": {
+        "title": "CSS",
+        "desc": "Stylesheet language used for describing the look and formatting of a document.",
+        "nlink": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        "vlink": "https://www.youtube.com/watch?v=1PnVor36_40",
+        "image": "/Resources/css.png"
+      },
+      "JavaScript": {
+        "title": "JavaScript",
+        "desc": "Programming language for web development.",
+        "nlink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "vlink": "https://www.youtube.com/watch?v=W6NZfCO5SIk",
+        "image": "/Resources/javascript.png"
+      },
+      "TypeScript": {
+        "title": "TypeScript",
+        "desc": "Strongly typed programming language that builds on JavaScript with type safety.",
+        "nlink": "https://www.typescriptlang.org/docs/",
+        "vlink": "https://www.youtube.com/watch?v=BwuLxPH8IDs",
+        "image": "/Resources/typescript.png"
+      },
+      "Bootstrap": {
+        "title": "Bootstrap",
+        "desc": "The most popular CSS framework for responsive, mobile-first websites.",
+        "nlink": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+        "vlink": "https://www.youtube.com/watch?v=4sosXZsdy-s",
+        "image": "/Resources/bootstrap.png"
+      },
+      "Tailwind CSS": {
+        "title": "Tailwind CSS",
+        "desc": "A utility-first CSS framework for rapidly building custom user interfaces.",
+        "nlink": "https://tailwindcss.com/docs",
+        "vlink": "https://www.youtube.com/watch?v=UBOj6rqRUME",
+        "image": "/Resources/tailwind.png"
+      }
+    },
+    "Frontend": {
+      "React": {
+        "title": "React",
+        "desc": "A JavaScript library for building user interfaces.",
+        "nlink": "https://reactjs.org/",
+        "vlink": "https://www.youtube.com/watch?v=w7ejDZ8SWv8",
+        "image": "/Resources/react.png"
+      },
+      "Vue": {
+        "title": "Vue.js",
+        "desc": "A progressive framework for building user interfaces.",
+        "nlink": "https://vuejs.org/",
+        "vlink": "https://www.youtube.com/watch?v=FXpIoQ_rT_c",
+        "image": "/Resources/vue.png"
+      },
+      "Angular": {
+        "title": "Angular",
+        "desc": "A platform for building mobile and desktop web applications.",
+        "nlink": "https://angular.io/",
+        "vlink": "https://www.youtube.com/watch?v=3qBXWUpoPHo",
+        "image": "/Resources/angular.png"
+      },
+      "Svelte": {
+        "title": "Svelte",
+        "desc": "A radical new approach to building user interfaces with less code.",
+        "nlink": "https://svelte.dev/docs",
+        "vlink": "https://www.youtube.com/watch?v=rv3Yq-B8qp4",
+        "image": "/Resources/svelte.png"
+      },
+      "Next.js": {
+        "title": "Next.js",
+        "desc": "The React framework for production with hybrid static & server rendering.",
+        "nlink": "https://nextjs.org/docs",
+        "vlink": "https://www.youtube.com/watch?v=9P8mASSREYM",
+        "image": "/Resources/nextjs.png"
+      },
+      "Redux": {
+        "title": "Redux",
+        "desc": "A predictable state container for JavaScript applications.",
+        "nlink": "https://redux.js.org/",
+        "vlink": "https://www.youtube.com/watch?v=zrs7u6bdbUw",
+        "image": "/Resources/redux.png"
+      }
+    },
+    "Backend": {
+      "Node.js": {
+        "title": "Node.js",
+        "desc": "JavaScript runtime built on Chrome's V8 JavaScript engine for server-side development.",
+        "nlink": "https://nodejs.org/en/docs/",
+        "vlink": "https://www.youtube.com/watch?v=TlB_eWDSMt4",
+        "image": "/Resources/nodejs.png"
+      },
+      "Express.js": {
+        "title": "Express.js",
+        "desc": "Fast, unopinionated, minimalist web framework for Node.js.",
+        "nlink": "https://expressjs.com/",
+        "vlink": "https://www.youtube.com/watch?v=SccSCuHhOw0",
+        "image": "/Resources/express.png"
+      },
+      "Django": {
+        "title": "Django",
+        "desc": "A high-level Python web framework that encourages rapid development.",
+        "nlink": "https://docs.djangoproject.com/",
+        "vlink": "https://www.youtube.com/watch?v=F5mRW0jo-U4",
+        "image": "/Resources/django.png"
+      },
+      "Flask": {
+        "title": "Flask",
+        "desc": "A lightweight WSGI web application framework in Python.",
+        "nlink": "https://flask.palletsprojects.com/",
+        "vlink": "https://www.youtube.com/watch?v=Z1RJmh_OqeA",
+        "image": "/Resources/flask.png"
+      },
+      "Spring Boot": {
+        "title": "Spring Boot",
+        "desc": "Java-based framework for building production-ready applications with minimal setup.",
+        "nlink": "https://spring.io/projects/spring-boot",
+        "vlink": "https://www.youtube.com/watch?v=9SGDpanrc8U",
+        "image": "/Resources/spring-boot.png"
+      }
+    },
+    "Databases": {
+      "MongoDB": {
+        "title": "MongoDB",
+        "desc": "A popular NoSQL database with scalability and flexibility.",
+        "nlink": "https://docs.mongodb.com/",
+        "vlink": "https://www.youtube.com/watch?v=Www6cTUymCY",
+        "image": "/Resources/mongodb.png"
+      },
+      "MySQL": {
+        "title": "MySQL",
+        "desc": "The world's most popular open source relational database.",
+        "nlink": "https://dev.mysql.com/doc/",
+        "vlink": "https://www.youtube.com/watch?v=7S_tz1z_5bA",
+        "image": "/Resources/mysql.png"
+      },
+      "PostgreSQL": {
+        "title": "PostgreSQL",
+        "desc": "A powerful, open source object-relational database system.",
+        "nlink": "https://www.postgresql.org/docs/",
+        "vlink": "https://www.youtube.com/watch?v=qw--VYLpxG4",
+        "image": "/Resources/postgresql.png"
+      },
+      "Firebase": {
+        "title": "Firebase",
+        "desc": "Google's mobile and web application development platform with integrated services.",
+        "nlink": "https://firebase.google.com/docs",
+        "vlink": "https://www.youtube.com/watch?v=9kRgVxULbag",
+        "image": "/Resources/firebase.png"
+      }
+    }
+  },
+  "Programming": {
+    "Languages": {
+      "Python": {
+        "title": "Python",
+        "desc": "A high-level programming language for general-purpose programming.",
+        "nlink": "https://www.python.org/",
+        "vlink": "https://www.youtube.com/watch?v=_uQrJ0TkZlc",
+        "image": "/Resources/python.png"
+      },
+      "Java": {
+        "title": "Java",
+        "desc": "A class-based, object-oriented programming language.",
+        "nlink": "https://www.java.com/",
+        "vlink": "https://www.youtube.com/watch?v=eIrMbAQSU34",
+        "image": "/Resources/java.png"
+      },
+      "C++": {
+        "title": "C++",
+        "desc": "A powerful general-purpose programming language with performance and flexibility.",
+        "nlink": "https://isocpp.org/",
+        "vlink": "https://www.youtube.com/watch?v=vLnPwxZdW4Y",
+        "image": "/Resources/cpp.png"
+      },
+      "C#": {
+        "title": "C#",
+        "desc": "An elegant and type-safe object-oriented language that enables developers to build secure and robust applications.",
+        "nlink": "https://docs.microsoft.com/en-us/dotnet/csharp/",
+        "vlink": "https://www.youtube.com/watch?v=GhQdlIFylQ8",
+        "image": "/Resources/csharp.png"
+      },
+      "Rust": {
+        "title": "Rust",
+        "desc": "A systems programming language focused on safety, speed, and concurrency.",
+        "nlink": "https://www.rust-lang.org/learn",
+        "vlink": "https://www.youtube.com/watch?v=5C_HPTJg5ek",
+        "image": "/Resources/rust.png"
+      },
+      "Go": {
+        "title": "Go",
+        "desc": "An open source programming language designed for building simple, fast, and reliable software.",
+        "nlink": "https://golang.org/doc/",
+        "vlink": "https://www.youtube.com/watch?v=YS4e4q9oBaU",
+        "image": "/Resources/go.png"
+      },
+      "Swift": {
+        "title": "Swift",
+        "desc": "A powerful and intuitive programming language for iOS, macOS, watchOS, and tvOS.",
+        "nlink": "https://swift.org/documentation/",
+        "vlink": "https://www.youtube.com/watch?v=comQ1-x2a1Q",
+        "image": "/Resources/swift.png"
+      }
+    },
+    "Paradigms": {
+      "Functional Programming": {
+        "title": "Functional Programming",
+        "desc": "A programming paradigm that treats computation as the evaluation of mathematical functions.",
+        "nlink": "https://www.geeksforgeeks.org/functional-programming-paradigm/",
+        "vlink": "https://www.youtube.com/watch?v=dAPL7MQGjyM",
+        "image": "/Resources/functional.png"
+      },
+      "Object-Oriented Programming": {
+        "title": "OOP",
+        "desc": "A programming paradigm based on the concept of 'objects' containing data and methods.",
+        "nlink": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming",
+        "vlink": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
+        "image": "/Resources/oop.png"
+      }
+    }
+  },
+  "App Dev": {
+    "Frameworks": {
+      "Flutter": {
+        "title": "Flutter",
+        "desc": "An open-source UI software development toolkit.",
+        "nlink": "https://flutter.dev/",
+        "vlink": "https://www.youtube.com/watch?v=fq4N0hgOWzU",
+        "image": "/Resources/flutter.png"
+      },
+      "React Native": {
+        "title": "React Native",
+        "desc": "A framework for building native apps using React.",
+        "nlink": "https://reactnative.dev/",
+        "vlink": "https://www.youtube.com/watch?v=0-S5a0eXPoc",
+        "image": "/Resources/react-native.png"
+      },
+      "SwiftUI": {
+        "title": "SwiftUI",
+        "desc": "A declarative UI framework for building apps across Apple platforms.",
+        "nlink": "https://developer.apple.com/xcode/swiftui/",
+        "vlink": "https://www.youtube.com/watch?v=Nfa4xEHjDlI",
+        "image": "/Resources/swiftui.png"
+      },
+      "Xamarin": {
+        "title": "Xamarin",
+        "desc": "A Microsoft platform for building mobile apps with .NET and C#.",
+        "nlink": "https://dotnet.microsoft.com/apps/xamarin",
+        "vlink": "https://www.youtube.com/watch?v=NGN5GZm8P_E",
+        "image": "/Resources/xamarin.png"
+      },
+      "Ionic": {
+        "title": "Ionic",
+        "desc": "An open source mobile UI toolkit for building cross-platform apps using web technologies.",
+        "nlink": "https://ionicframework.com/docs",
+        "vlink": "https://www.youtube.com/watch?v=qTdwUpQRptc",
+        "image": "/Resources/ionic.png"
+      }
+    },
+    "Native Development": {
+      "Android Studio": {
+        "title": "Android Studio",
+        "desc": "The official IDE for Android app development.",
+        "nlink": "https://developer.android.com/studio",
+        "vlink": "https://www.youtube.com/watch?v=EknEIzswvC0",
+        "image": "/Resources/android-studio.png"
+      },
+      "Xcode": {
+        "title": "Xcode",
+        "desc": "Apple's integrated development environment for macOS and iOS development.",
+        "nlink": "https://developer.apple.com/xcode/",
+        "vlink": "https://www.youtube.com/watch?v=aw7lUm_PIjQ",
+        "image": "/Resources/xcode.png"
+      }
+    }
+  },
+  "Tools": {
+    "Version Control": {
+      "Git": {
+        "title": "Git",
+        "desc": "A distributed version control system.",
+        "nlink": "https://git-scm.com/",
+        "vlink": "https://www.youtube.com/watch?v=USjZcfj8yxE",
+        "image": "/Resources/git.png"
+      },
+      "GitHub": {
+        "title": "GitHub",
+        "desc": "A platform and cloud-based service for software development and version control using Git.",
+        "nlink": "https://docs.github.com/en",
+        "vlink": "https://www.youtube.com/watch?v=RGOj5yH7evk",
+        "image": "/Resources/github.png"
+      },
+      "GitLab": {
+        "title": "GitLab",
+        "desc": "A complete DevOps platform delivered as a single application.",
+        "nlink": "https://docs.gitlab.com/",
+        "vlink": "https://www.youtube.com/watch?v=MqL6BMOySIQ",
+        "image": "/Resources/gitlab.png"
+      }
+    },
+    "Development": {
+      "VS Code": {
+        "title": "VS Code",
+        "desc": "A lightweight but powerful source code editor from Microsoft.",
+        "nlink": "https://code.visualstudio.com/docs",
+        "vlink": "https://www.youtube.com/watch?v=WPqXP_kLzpo",
+        "image": "/Resources/vscode.png"
+      },
+      "IntelliJ IDEA": {
+        "title": "IntelliJ IDEA",
+        "desc": "An intelligent Java IDE with support for many other languages.",
+        "nlink": "https://www.jetbrains.com/idea/",
+        "vlink": "https://www.youtube.com/watch?v=yefmcX57Eyg",
+        "image": "/Resources/intellij.png"
+      },
+      "Docker": {
+        "title": "Docker",
+        "desc": "A platform for developing, shipping, and running applications in containers.",
+        "nlink": "https://docs.docker.com/",
+        "vlink": "https://www.youtube.com/watch?v=pTFZFxd4hOI",
+        "image": "/Resources/docker.png"
+      },
+      "Postman": {
+        "title": "Postman",
+        "desc": "A collaboration platform for API development.",
+        "nlink": "https://learning.postman.com/docs/getting-started/introduction/",
+        "vlink": "https://www.youtube.com/watch?v=VywxIQ2ZXw4",
+        "image": "/Resources/postman.png"
+      },
+      "Figma": {
+        "title": "Figma",
+        "desc": "A collaborative interface design tool for UI/UX design.",
+        "nlink": "https://help.figma.com/",
+        "vlink": "https://www.youtube.com/watch?v=Cx2dkpBxst8",
+        "image": "/Resources/figma.png"
+      }
+    },
+    "DevOps": {
+      "Jenkins": {
+        "title": "Jenkins",
+        "desc": "An open source automation server for building, deploying, and automating projects.",
+        "nlink": "https://jenkins.io/doc/",
+        "vlink": "https://www.youtube.com/watch?v=LFDrDnKPOTg",
+        "image": "/Resources/jenkins.png"
+      },
+      "Kubernetes": {
+        "title": "Kubernetes",
+        "desc": "An open-source system for automating deployment, scaling, and management of containerized applications.",
+        "nlink": "https://kubernetes.io/docs/home/",
+        "vlink": "https://www.youtube.com/watch?v=X48VuDVv0do",
+        "image": "/Resources/kubernetes.png"
+      },
+      "Terraform": {
+        "title": "Terraform",
+        "desc": "An open-source infrastructure as code software tool.",
+        "nlink": "https://www.terraform.io/docs",
+        "vlink": "https://www.youtube.com/watch?v=l5k1ai_GBDE",
+        "image": "/Resources/terraform.png"
+      }
+    }
+  },
+  "AI": {
+    "Machine Learning": {
+      "TensorFlow": {
+        "title": "TensorFlow",
+        "desc": "An open-source machine learning framework.",
+        "nlink": "https://www.tensorflow.org/",
+        "vlink": "https://www.youtube.com/watch?v=tPYj3fFJGjk",
+        "image": "/Resources/tensorflow.png"
+      },
+      "PyTorch": {
+        "title": "PyTorch",
+        "desc": "An open source machine learning library based on the Torch library.",
+        "nlink": "https://pytorch.org/docs/stable/index.html",
+        "vlink": "https://www.youtube.com/watch?v=GIsg-ZUy0MY",
+        "image": "/Resources/pytorch.png"
+      },
+      "Scikit-learn": {
+        "title": "Scikit-learn",
+        "desc": "A simple and efficient tool for data mining and data analysis.",
+        "nlink": "https://scikit-learn.org/stable/documentation.html",
+        "vlink": "https://www.youtube.com/watch?v=0B5eIE_1vpU",
+        "image": "/Resources/scikit-learn.png"
+      },
+      "Keras": {
+        "title": "Keras",
+        "desc": "A deep learning API running on top of TensorFlow.",
+        "nlink": "https://keras.io/",
+        "vlink": "https://www.youtube.com/watch?v=qFJeN9V1ZsI",
+        "image": "/Resources/keras.png"
+      }
+    },
+    "Data Science": {
+      "Pandas": {
+        "title": "Pandas",
+        "desc": "A fast, powerful, flexible and easy to use open source data analysis and manipulation tool.",
+        "nlink": "https://pandas.pydata.org/docs/",
+        "vlink": "https://www.youtube.com/watch?v=vmEHCJofslg",
+        "image": "/Resources/pandas.png"
+      },
+      "NumPy": {
+        "title": "NumPy",
+        "desc": "The fundamental package for scientific computing with Python.",
+        "nlink": "https://numpy.org/doc/",
+        "vlink": "https://www.youtube.com/watch?v=QUT1VHiLmmI",
+        "image": "/Resources/numpy.png"
+      },
+      "Matplotlib": {
+        "title": "Matplotlib",
+        "desc": "A comprehensive library for creating static, animated, and interactive visualizations in Python.",
+        "nlink": "https://matplotlib.org/stable/contents.html",
+        "vlink": "https://www.youtube.com/watch?v=3Xc3CA655Y4",
+        "image": "/Resources/matplotlib.png"
+      },
+      "Jupyter": {
+        "title": "Jupyter",
+        "desc": "An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text.",
+        "nlink": "https://jupyter.org/documentation",
+        "vlink": "https://www.youtube.com/watch?v=HW29067qVWk",
+        "image": "/Resources/jupyter.png"
+      }
+    },
+    "Deep Learning": {
+      "NVIDIA CUDA": {
+        "title": "NVIDIA CUDA",
+        "desc": "A parallel computing platform and programming model for general computing on GPUs.",
+        "nlink": "https://developer.nvidia.com/cuda-toolkit",
+        "vlink": "https://www.youtube.com/watch?v=_41LCMFpsFs",
+        "image": "/Resources/cuda.png"
+      },
+      "Hugging Face": {
+        "title": "Hugging Face",
+        "desc": "Build, train and deploy state of the art models powered by transformers.",
+        "nlink": "https://huggingface.co/docs",
+        "vlink": "https://www.youtube.com/watch?v=QEaBAZQCtwE",
+        "image": "/Resources/huggingface.png"
+      },
+      "OpenCV": {
+        "title": "OpenCV",
+        "desc": "An open source computer vision and machine learning software library.",
+        "nlink": "https://docs.opencv.org/",
+        "vlink": "https://www.youtube.com/watch?v=oXlwWbU8l2o",
+        "image": "/Resources/opencv.png"
+      }
+    },
+    "Generative AI": {
+      "Stable Diffusion": {
+        "title": "Stable Diffusion",
+        "desc": "A deep learning, text-to-image model used to generate detailed images from text descriptions.",
+        "nlink": "https://stability.ai/stable-diffusion",
+        "vlink": "https://www.youtube.com/watch?v=OTqsYhgVt5g",
+        "image": "/Resources/stable-diffusion.png"
+      },
+      "LangChain": {
+        "title": "LangChain",
+        "desc": "A framework for developing applications powered by language models.",
+        "nlink": "https://docs.langchain.com/docs/",
+        "vlink": "https://www.youtube.com/watch?v=aywZrzNaKjs",
+        "image": "/Resources/langchain.png"
+      },
+      "OpenAI API": {
+        "title": "OpenAI API",
+        "desc": "API access to GPT-4, GPT-3.5, and other state-of-the-art AI models for language tasks.",
+        "nlink": "https://platform.openai.com/docs/introduction",
+        "vlink": "https://www.youtube.com/watch?v=LbT1yp6quS8",
+        "image": "/Resources/openai.png"
+      }
+    }
+  },
+  "Cybersecurity": {
+    "Network Security": {
+      "Wireshark": {
+        "title": "Wireshark",
+        "desc": "The world's foremost and widely-used network protocol analyzer.",
+        "nlink": "https://www.wireshark.org/docs/",
+        "vlink": "https://www.youtube.com/watch?v=lb1Dw0elw0Q",
+        "image": "/Resources/wireshark.png"
+      },
+      "Metasploit": {
+        "title": "Metasploit",
+        "desc": "A penetration testing framework that makes hacking simpler.",
+        "nlink": "https://docs.metasploit.com/",
+        "vlink": "https://www.youtube.com/watch?v=CNy4rVx92y4",
+        "image": "/Resources/metasploit.png"
+      },
+      "Kali Linux": {
+        "title": "Kali Linux",
+        "desc": "An open-source, Debian-based Linux distribution geared towards various information security tasks.",
+        "nlink": "https://www.kali.org/docs/",
+        "vlink": "https://www.youtube.com/watch?v=lZAoFs75_cs",
+        "image": "/Resources/kali.png"
+      }
+    },
+    "Web Security": {
+      "OWASP": {
+        "title": "OWASP",
+        "desc": "The Open Web Application Security Project, dedicated to web application security.",
+        "nlink": "https://owasp.org/www-project-top-ten/",
+        "vlink": "https://www.youtube.com/watch?v=hKF89TXttnw",
+        "image": "/Resources/owasp.png"
+      },
+      "Burp Suite": {
+        "title": "Burp Suite",
+        "desc": "An integrated platform for performing security testing of web applications.",
+        "nlink": "https://portswigger.net/burp/documentation",
+        "vlink": "https://www.youtube.com/watch?v=G3hpAeoZ4ek",
+        "image": "/Resources/burpsuite.png"
+      }
+    }
+  },
+  "Cloud Computing": {
+    "Platforms": {
+      "AWS": {
+        "title": "AWS",
+        "desc": "Amazon Web Services, a comprehensive cloud computing platform.",
+        "nlink": "https://docs.aws.amazon.com/",
+        "vlink": "https://www.youtube.com/watch?v=ulprqHHWlng",
+        "image": "/Resources/aws.png"
+      },
+      "Microsoft Azure": {
+        "title": "Azure",
+        "desc": "Microsoft's cloud computing service for building, testing, deploying, and managing applications.",
+        "nlink": "https://docs.microsoft.com/en-us/azure/",
+        "vlink": "https://www.youtube.com/watch?v=JhqpF-5E10I",
+        "image": "/Resources/azure.png"
+      },
+      "Google Cloud": {
+        "title": "GCP",
+        "desc": "Google Cloud Platform, a suite of cloud computing services.",
+        "nlink": "https://cloud.google.com/docs",
+        "vlink": "https://www.youtube.com/watch?v=IeMYQ-qJeK4",
+        "image": "/Resources/gcp.png"
+      },
+      "Heroku": {
+        "title": "Heroku",
+        "desc": "A platform as a service (PaaS) that enables developers to build, run, and operate applications in the cloud.",
+        "nlink": "https://devcenter.heroku.com/",
+        "vlink": "https://www.youtube.com/watch?v=aUW5GAFhu6s",
+        "image": "/Resources/heroku.png"
+      }
+    },
+    "Concepts": {
+      "Serverless": {
+        "title": "Serverless",
+        "desc": "A cloud computing execution model where the provider runs the server and dynamically allocates resources.",
+        "nlink": "https://aws.amazon.com/lambda/serverless-architectures-learn-more/",
+        "vlink": "https://www.youtube.com/watch?v=W_VV2Fx32_Y",
+        "image": "/Resources/serverless.png"
+      },
+      "Microservices": {
+        "title": "Microservices",
+        "desc": "An architectural style that structures an application as a collection of loosely coupled services.",
+        "nlink": "https://microservices.io/",
+        "vlink": "https://www.youtube.com/watch?v=CZ3wIuvmHeM",
+        "image": "/Resources/microservices.png"
+      }
+    }
+  }
+}

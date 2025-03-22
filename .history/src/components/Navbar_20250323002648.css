@@ -1,0 +1,239 @@
+body {
+  background-color: black;
+}
+
+.NAVBAR{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+.NAVBAR.hidden {
+  transform: translateY(-100%);
+}
+
+.NAVBAR.visible {
+  transform: translateY(0);
+}
+
+nav {
+  margin-top: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggler-icon{
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\nav.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+ul.navbar-nav.mx-auto.mb-2.mb-lg-0.nav-bar {
+  border: 1px solid white;
+  border-radius: 100px;
+  width: 45%;
+  height: 55.089px;
+  color: white;
+  border-radius: 27.545px;
+  border: 0.874px solid #363636;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 3.498px 8.744px rgba(0, 0, 0, 0.25);
+}
+
+.nav-link,
+.nav-link.active {
+  font-size: 17px;
+  font-family: turnkey-light;
+  color: white !important;
+}
+
+.nav-link:hover{
+  color: #36be00 !important;
+}
+
+
+.joinus-btn {
+  width: 146px;
+  height: 47.351px;
+  border-radius: 32.751px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: #36be00;
+  font-family: turnkey-medium;
+  color: white;
+  font-size: 20px;
+}
+
+.scope-logo {
+  width: 10%;
+  height: 10vh;
+  position: relative;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\scope-logo.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* Desktop: 2x4 grid */
+@media (min-width: 1024px) {
+  
+}
+
+/* Tablet: 3x3 grid */
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+}
+
+
+/* Mobile: 3x3 grid */
+@media (max-width: 768px) {
+  .scope-logo{
+    width: 30%;
+  }
+  .nav-link.active {
+    background-color: transparent;
+    color: #36be00 !important;
+    padding: 10px 30px 10px 30px;
+    width: 200%;
+  }
+  ul.navbar-nav.mx-auto.mb-2.mb-lg-0.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    border: 0px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+  }
+  .joinus-btn {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 90%;
+    background: #36be00;
+    color: white;
+    transition: all 0.2s ease-in-out;
+  }
+  form.d-flex {
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .nav-item {
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+}
+
+/* Add smooth transitions to navbar collapse */
+.navbar-collapse {
+  transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: height, opacity;
+}
+
+.navbar-collapse.collapsing {
+  height: auto !important;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0;
+}
+
+.navbar-collapse.show {
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Smooth transitions for the navbar items */
+.nav-link {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Make join button transitions smooth too */
+.joinus-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Improve the basic navbar animations */
+.NAVBAR {
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.NAVBAR.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.NAVBAR.visible {
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Mobile menu items fade-in effect */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .navbar-collapse.show {
+    max-height: 100vh;
+  }
+  
+  /* Staggered animation for nav items */
+  .nav-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), 
+                opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  
+  .navbar-collapse.show .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Delay each nav item to create a staggered effect */
+  .navbar-collapse.show .nav-item:nth-child(1) {
+    transition-delay: 0.05s;
+  }
+  
+  .navbar-collapse.show .nav-item:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+  
+  .navbar-collapse.show .nav-item:nth-child(3) {
+    transition-delay: 0.15s;
+  }
+  
+  .navbar-collapse.show .nav-item:nth-child(4) {
+    transition-delay: 0.2s;
+  }
+  
+  .navbar-collapse.show .nav-item:nth-child(5) {
+    transition-delay: 0.25s;
+  }
+  
+  /* Join Us button animation */
+  .navbar-collapse a.linktree {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), 
+                opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition-delay: 0.3s;
+  }
+  
+  .navbar-collapse.show a.linktree {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

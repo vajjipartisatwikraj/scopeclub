@@ -1,0 +1,259 @@
+.rs-head {
+  font-family: turnkey-bold;
+  color: white;
+  font-size: 5rem;
+  letter-spacing: -2px;
+  margin-bottom: 0px;
+}
+
+.rs-caption {
+  font-family: turnkey-light;
+  font-size: 1rem;
+  font-weight: 100;
+  color: white;
+  width: 45%;
+  line-height: 154.513%; /* 25.29px */
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.bottom-image {
+  position: absolute;
+  top: 5%;
+  height: 130vh;
+  width: 90%;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\circles.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.hw1-container {
+  margin-top: 5%;
+  width: 10%;
+  height: 4vh;
+  border-radius: 27.44px;
+  border: 0.61px solid #36be00;
+  box-shadow: 0px 0px 4.878px 2.439px rgba(54, 190, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+
+.hw1-text {
+  font-family: turnkey-light;
+  font-size: 1rem;
+  color: white;
+  margin: 0px;
+  width: fit-content;
+  text-overflow: ellipsis;
+}
+
+.hw1-arrow {
+  width: 10%;
+  height: 100%;
+  position: relative;
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\arrow.png);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rs-top-layer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100vh;
+  gap: 10px;
+  width: 100vw;
+}
+
+/* Improved Dropdown Styling */
+.rs-dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.dropdown {
+  width: 300px;
+  padding: 12px 20px;
+  font-size: 22px;
+  font-family: turnkey-medium;
+  border: 2px solid #36be00;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: 0 0 15px rgba(54, 190, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Custom dropdown arrow */
+.rs-dropdown::after {
+  content: '';
+  position: absolute;
+  right: calc(50% - 130px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #36be00;
+  border-bottom: 2px solid #36be00;
+  transform: translateY(-50%) rotate(45deg);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.dropdown:focus + .rs-dropdown::after {
+  transform: translateY(-30%) rotate(225deg);
+}
+
+.dropdown:hover, .dropdown:focus {
+  border-color: #36be00;
+  background-color: rgba(54, 190, 0, 0.1);
+  box-shadow: 0 0 20px rgba(54, 190, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.dropdown:focus {
+  box-shadow: 0 0 0 3px rgba(54, 190, 0, 0.3), 0 0 20px rgba(54, 190, 0, 0.2);
+}
+
+.dropdown option {
+  background-color: #111;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #222;
+}
+
+/* Pulse animation on load */
+@keyframes dropdown-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(54, 190, 0, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(54, 190, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(54, 190, 0, 0); }
+}
+
+.dropdown {
+  animation: dropdown-pulse 2s infinite;
+}
+
+/* Mobile responsive styling */
+@media screen and (max-width: 600px) {
+  .dropdown {
+    width: 90%;
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+  
+  .rs-dropdown::after {
+    right: 15%;
+  }
+}
+
+/* Customize dropdown options in WebKit browsers */
+.dropdown::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dropdown::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+  background: #36be00;
+  border-radius: 10px;
+}
+
+.section-title {
+  color: #fff;
+  width: fit-content;
+  font-family: turnkey-medium;
+  font-size: 40px;
+  padding-bottom: 0.5%;
+  margin: 50px 0px 50px 0px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-bottom: 3px solid #33d90b;
+}
+
+
+.rs-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.resource-section{
+  width: 90%;
+  margin-bottom: 100px;
+}
+
+.courses{
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.tech-list{
+  width: max-content;
+  display: flex;
+  gap: 30px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .hw1-container{
+    width: 50%;
+  }
+
+  .rs-head{
+    font-size: 40px;
+  }
+
+  .rs-caption{
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .bottom-image{
+    top: -12%;
+    width: 100vw;
+  }
+
+  .c-circle-light {
+    position: absolute;
+    align-items: center;
+    z-index: 1;
+    filter: blur(200px);
+    background-color: #36be00;
+    border-radius: 100%;
+    width: 15.1875rem;
+    height: 15.1875rem;
+    position: absolute;
+  }
+}
+

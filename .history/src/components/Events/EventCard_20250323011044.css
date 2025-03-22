@@ -1,0 +1,389 @@
+.EventCard {
+  margin: auto;
+  width: 100%;
+  height: 30vh;
+  border-radius: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-size: 16px;
+}
+.EventCard .thumb {
+  width: auto;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.EventCard .infos {
+  width: auto;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  transition: 0.6s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+  border-radius: 1rem;
+}
+
+.EventCard .infos .title {
+  position: relative;
+  margin: 7px 0;
+  letter-spacing: 2px;
+  color: #152536;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-shadow: 0 0 0px #32577f;
+}
+
+.EventCard .infos .detail {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  color: rgba(21, 37, 54, 0.7);
+}
+
+.EventCard .infos .txt {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 10%;
+  line-height: 2;
+  font-size: 0.95em;
+  color: rgba(21, 37, 54, 0.7);
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+.EventCard .infos .details {
+  padding-bottom: 10%;
+  letter-spacing: 1px;
+  color: #4e958b;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+.EventCard .ellipss {
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5em;
+  max-height: 3em;
+}
+
+.EventCard:hover .ellipss {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-height: 1.5em;
+  max-height: 7.5em;
+} 
+.event:hover .infos {
+  -webkit-transform: translateY(-30vh);
+  transform: translateY(-30vh);
+}
+
+.EventCard:hover .infos {
+  overflow-y: auto;
+}
+
+.EventCard .infos::-webkit-scrollbar {
+  width: 5px;
+}
+
+.EventCard .infos::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+.EventCard .infos::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.EventCard:hover .infos .seats,
+.EventCard:hover .infos .txt,
+.EventCard:hover .infos .details {
+  opacity: 1;
+}
+.EventCard {
+  text-align: left;
+}
+
+.past,
+.upcoming {
+  margin-bottom: 20px;
+}
+
+.events{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr); /* 2 columns */
+  grid-gap: 50px 0px; /* 50px row gap, 20px column gap */
+  justify-content: space-around; 
+  padding-top: 0px;
+}
+
+.events1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 50px 0px; /* 50px row gap, 20px column gap */
+  justify-content: space-around; 
+  padding-top: 0px;
+}
+
+.event {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.event:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(54, 190, 0, 0.2);
+}
+
+.event::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(54, 190, 0, 0.1) 0%, transparent 100%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.event:hover::before {
+  opacity: 1;
+}
+
+.EventCard {
+  position: relative;
+  height: 260px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  z-index: 2;
+}
+
+.EventCard .thumb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.event:hover .EventCard .thumb {
+  transform: scale(1.1);
+  filter: brightness(0.7) contrast(1.2);
+}
+
+.information {
+  padding: 25px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.event-card-inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+}
+
+.ellipss {
+  font-size: 2rem;
+  color: #36be00;
+  font-family: turnkey-medium;
+  line-height: 1.1;
+  position: relative;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+.ellipss::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #36be00;
+  transition: width 0.4s ease;
+}
+
+.event:hover .ellipss::after {
+  width: 100%;
+}
+
+.detail {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: turnkey-medium;
+  margin: 3px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #36be00;
+  border-radius: 50%;
+}
+
+.txt {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  font-family: turnkey-light;
+  letter-spacing: 0.05rem;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.event:hover .txt {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.details {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  color: #36be00;
+  background-color: rgba(54, 190, 0, 0.1);
+  border: 1px solid rgba(54, 190, 0, 0.3);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-family: turnkey-medium;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #36be00;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.3, 0.1, 0.3, 1);
+}
+
+.event:hover .details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.details:hover {
+  color: #fff;
+}
+
+.details:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Card shine effect */
+.event::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.event:hover::after {
+  animation: shine 1.5s forwards;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-45deg);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateX(100%) rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .event {
+    min-height: 400px;
+  }
+  
+  .EventCard {
+    height: 200px;
+  }
+  
+  .ellipss {
+    font-size: 1.7rem;
+  }
+  
+  .detail {
+    font-size: 1rem;
+  }
+  
+  .txt {
+    font-size: 0.85rem;
+  }
+}
+
