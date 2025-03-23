@@ -1,0 +1,382 @@
+.EventCard {
+  margin: auto;
+  width: 100%;
+  height: 30vh;
+  border-radius: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-size: 16px;
+}
+.EventCard .thumb {
+  width: auto;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.EventCard .infos {
+  width: auto;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  transition: 0.6s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+  border-radius: 1rem;
+}
+
+.EventCard .infos .title {
+  position: relative;
+  margin: 7px 0;
+  letter-spacing: 2px;
+  color: #152536;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-shadow: 0 0 0px #32577f;
+}
+
+.EventCard .infos .detail {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  color: rgba(21, 37, 54, 0.7);
+}
+
+.EventCard .infos .txt {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 10%;
+  line-height: 2;
+  font-size: 0.95em;
+  color: rgba(21, 37, 54, 0.7);
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+.EventCard .infos .details {
+  padding-bottom: 10%;
+  letter-spacing: 1px;
+  color: #4e958b;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+.EventCard .ellipss {
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5em;
+  max-height: 3em;
+}
+
+.EventCard:hover .ellipss {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-height: 1.5em;
+  max-height: 7.5em;
+} 
+.event:hover .infos {
+  -webkit-transform: translateY(-30vh);
+  transform: translateY(-30vh);
+}
+
+.EventCard:hover .infos {
+  overflow-y: auto;
+}
+
+.EventCard .infos::-webkit-scrollbar {
+  width: 5px;
+}
+
+.EventCard .infos::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+.EventCard .infos::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.EventCard:hover .infos .seats,
+.EventCard:hover .infos .txt,
+.EventCard:hover .infos .details {
+  opacity: 1;
+}
+.EventCard {
+  text-align: left;
+}
+
+.past,
+.upcoming {
+  margin-bottom: 20px;
+}
+
+.events{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.events1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 50px 0px; /* 50px row gap, 20px column gap */
+  justify-content: space-around; 
+  padding-top: 0px;
+}
+
+.event {
+  width: 300px;
+  height: 450px;
+  border-radius: 12px;
+  background: rgba(10, 10, 10, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border: 1px solid rgba(40, 40, 40, 0.6);
+}
+
+.event:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(54, 190, 0, 0.2);
+}
+
+/* Glowing border effect */
+.event::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 0 0 rgba(54, 190, 0, 0);
+  transition: box-shadow 0.5s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.event:hover::before {
+  box-shadow: 0 0 20px 3px rgba(54, 190, 0, 0.3);
+}
+
+/* Main image styling */
+.EventCard {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px 12px 0 0;
+}
+
+.thumb {
+  width: 50%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.event:hover .thumb {
+  transform: scale(1.08);
+}
+
+/* Image overlay gradient */
+.thumb::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event:hover .thumb::after {
+  opacity: 1;
+}
+
+/* Info box */
+.infos {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Main content area */
+.information {
+  padding: 16px;
+  height: calc(100% - 160px); /* Subtract the image height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card-inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Title styling */
+.ellipss {
+  font-size: 1.5rem;
+  color: #36be00;
+  font-family: turnkey-medium;
+  margin: 0;
+  background: linear-gradient(90deg, #36be00, #56d429);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.event:hover .ellipss {
+  transform: translateY(-3px);
+}
+
+/* Details styling */
+.detail {
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: turnkey-medium;
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.event:hover .detail {
+  opacity: 1;
+}
+
+.detail::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  background-color: #36be00;
+  border-radius: 50%;
+}
+
+/* Description styling */
+.txt {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  font-family: turnkey-light;
+  line-height: 1.5;
+  margin-top: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  transition: -webkit-line-clamp 0.4s ease, color 0.3s ease;
+}
+
+.event:hover .txt {
+  -webkit-line-clamp: 4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Button styling - positioned at bottom */
+.details {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: rgba(54, 190, 0, 0.1);
+  color: #36be00;
+  font-size: 0.75rem;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(54, 190, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+.details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #36be00;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.details:hover {
+  color: #fff;
+}
+
+.details:hover::before {
+  transform: translateX(0);
+}
+
+/* Card hover animations */
+.event {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 450px) {
+  .event {
+    width: 280px;
+    height: 360px;
+  }
+  
+  .EventCard {
+    height: 140px;
+  }
+  
+  .ellipss {
+    font-size: 1.3rem;
+  }
+  
+  .events1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
