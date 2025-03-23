@@ -9,21 +9,21 @@
 
 @font-face {
   font-family: "turnkey-bold";
-  src: url("../public/fonts/TurnkeyLite-Bold.otf") format("opentype");
+  src: url("/fonts/TurnkeyLite-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "turnkey-medium";
-  src: url("../public/fonts/TurnkeyLite-Medium.otf") format("opentype");
+  src: url("/fonts/TurnkeyLite-Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "turnkey-light";
-  src: url("../public/fonts/TurnkeyLite-ExtraLight.otf") format("opentype");
+  src: url("/fonts/TurnkeyLite-ExtraLight.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -31,7 +31,7 @@
 
 @font-face {
   font-family: 'MADE-OUTER-SANS';
-  src: url("../public/fonts/MADEOuterSansBoldPERSONALUSE.otf") format('opentype');
+  src: url('/fonts/MADEOuterSansBoldPERSONALUSE.otf') format('opentype');
 }
 
 .green-container {
@@ -74,7 +74,7 @@
   height: 100%;
   position: relative;
   bottom: 0%;
-  background-image: url("../public/images/Vector1.png");
+  background-image: url("/images/Vector1.png");
   background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
@@ -86,7 +86,7 @@
   height: 100%;
   position: relative;
   bottom: 0%;
-  background-image: url("../public/images/Vector2.png");
+  background-image: url("/images/Vector2.png");
   background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
@@ -155,7 +155,7 @@
   width: 20%;
   height: 90%;
   position: relative;
-  background-image: url("../public/images/arrow.png");
+  background-image: url("/images/arrow.png");
   background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
@@ -509,7 +509,7 @@ body {
   width: 20%;
   height: 7vh;
   position: relative;
-  background-image: url("../public/images/scope.png");
+  background-image: url("/images/scope.png");
   background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
@@ -517,7 +517,7 @@ body {
 }
 
 .mlrit{
-  background-image: url("../public/images/mlrit.png");
+  background-image: url("/images/mlrit.png");
   height: 5vh;
 }
 
