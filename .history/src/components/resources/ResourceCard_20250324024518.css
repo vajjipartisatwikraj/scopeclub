@@ -10,7 +10,6 @@
 
 .ResourceCard:hover {
   box-shadow: 0px 0px 20px 5px rgba(54, 190, 0, 0.3);
-  transition: 0.6s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
 
 .ResourceCard .thumb .rs-image {
