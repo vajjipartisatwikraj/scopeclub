@@ -508,7 +508,7 @@ body {
   width: 20%;
   height: 7vh;
   position: relative;
-  background-image: url("../public/images/scope.png");
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\scope.png);
   background-size: cover;
   background-size: contain;
   background-repeat: no-repeat;
@@ -516,7 +516,7 @@ body {
 }
 
 .mlrit{
-  background-image: url("../public/images/mlrit.png");
+  background-image: url(C:\Users\SATWIK\OneDrive\Desktop\scope-website\public\images\mlrit.png);
   height: 5vh;
 }
 
