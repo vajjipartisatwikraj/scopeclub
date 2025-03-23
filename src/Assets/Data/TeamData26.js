@@ -4,7 +4,7 @@ export const t26 = [
     name: "Tej Pavan",
     position: "President",
     alt: "Tej Pavan",
-    image: "Team/t26/Tejpavan.jpg",
+    image: "Team/t26/tejpavan.jpg",
     socials: {
       github: "",
       instagram: "",

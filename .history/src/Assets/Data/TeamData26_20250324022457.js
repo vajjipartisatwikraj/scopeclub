@@ -4,7 +4,7 @@ export const t26 = [
     name: "Tej Pavan",
     position: "President",
     alt: "Tej Pavan",
-    image: "Team/t26/.jpg",
+    image: "Team/t26/tejpavan.jpg",
     socials: {
       github: "",
       instagram: "",
@@ -40,7 +40,7 @@ export const t26 = [
     name: "Asreetha Guvvala",
     position: "Secretary",
     alt: "Asreetha Guvvala",
-    image: "Team/t26/ASREETHA_GUVVALA.jpg",
+    image: "Team/t26/asreetha.jpg",
     socials: {
       github: "",
       instagram: "",
@@ -52,7 +52,7 @@ export const t26 = [
     name: "Samala Sripadh",
     position: "Technical Lead",
     alt: "Samala Sripadh",
-    image: "Team/t26/SAMALA_SRIPADH.jpg",
+    image: "Team/t26/sripadh.jpg",
     socials: {
       linkedin: "https://in.linkedin.com/in/samala-sripadh-17aa50294",
       github: "",
@@ -64,7 +64,7 @@ export const t26 = [
     name: "Harshitha Yadav",
     position: "Operations Lead",
     alt: "Harshitha Yadav",
-    image: "Team/t26/HARSHITHA_YADAV.jpg",
+    image: "Team/t26/harshitha.jpg",
     socials: {
       github: "https://github.com/Possiblef",
       instagram: "https://instagram.com/hershey_yadav18?igshid=MTk0NTkyODZkYg==",
@@ -76,11 +76,11 @@ export const t26 = [
     name: "Harshitha",
     position: "Promotions Lead",
     alt: "",
-    image: "Team/t26/ARAVIND_REDDY.jpg",
+    image: "Team/t26/vharsitha.JPG",
     socials: {
       github: "https://github.com/aravindreddy540",
-      instagram: "https://instagram.com/aravindreddy5406?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr",
-      linkedin: "https://www.linkedin.com/in/aravind-reddygari-37051028a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      instagram: "",
+      linkedin: "https://www.linkedin.com/in/harshitha-v-322426288/",
     },
   },
   {
@@ -88,7 +88,7 @@ export const t26 = [
     name: "Dhanush Reddy",
     position: "Promotions Lead",
     alt: "Dhanush Reddy",
-    image: "Team/t26/DHANUSH_REDDY.jpg",
+    image: "Team/t26/dhanush.jpg",
     socials: {
       github: "",
       instagram: "https://www.instagram.com/invites/contact/?i=fxgxwtjkclqy&utm_content=r6awvgg",
@@ -100,7 +100,7 @@ export const t26 = [
     name: "Aravind Reddy",
     position: "Photography Lead",
     alt: "Aravind Reddy",
-    image: "Team/t26/ARAVIND_REDDY.jpg",
+    image: "Team/t26/aravind.jpg",
     socials: {
       github: "https://github.com/aravindreddy540",
       instagram: "https://instagram.com/aravindreddy5406?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr",
@@ -112,7 +112,7 @@ export const t26 = [
     name: "K. Joseph",
     position: "Graphic Designing Lead",
     alt: "K. Joseph",
-    image: "Team/t26/K_JOSEPH.jpg",
+    image: "Team/t26/jason.jpg",
     socials: {
       github: "https://github.com/jasonsama44",
       instagram: "",
@@ -124,7 +124,7 @@ export const t26 = [
     name: "Gannaram Prasanna",
     position: "Technical Member",
     alt: "Gannaram Prasanna",
-    image: "Team/t26/GANNARAM_PRASANNA.jpg",
+    image: "Team/t26/prasanna.jpg",
     socials: {
       github: "",
       instagram: "",
@@ -136,7 +136,7 @@ export const t26 = [
     name: "K.Anusha",
     position: "Promotions",
     alt: "K.Anusha",
-    image: "Team/t26/K_ANUSHA.jpg",
+    image: "Team/t26/anusha.jpg",
     socials: {
       github: "",
       instagram: "",
@@ -148,7 +148,7 @@ export const t26 = [
     name: "M Harshavardhan",
     position: "Technical Member",
     alt: "M Harshavardhan",
-    image: "Team/t26/M_HARSHAVARDHAN.jpg",
+    image: "Team/t26/harsha.jpeg",
     socials: {
       github: "https://github.com/Harsha19-08",
       instagram: "https://instagram.com/curious_harsha?igshid=MTk0NTkyODZkYg==",
@@ -160,7 +160,7 @@ export const t26 = [
     name: "N Aasrith",
     position: "Technical Member",
     alt: "N Aasrith",
-    image: "Team/t26/N_AASRITH.jpg",
+    image: "Team/t26/aashrith.jpg",
     socials: {
       github: "https://github.com/Aasrith22",
       instagram: "",
@@ -172,7 +172,7 @@ export const t26 = [
     name: "Nitish Kumar Yadav",
     position: "Technical Member",
     alt: "Nitish Kumar Yadav",
-    image: "Team/t26/NITISH_KUMAR_YADAV.jpg",
+    image: "Team/t26/nithish.jpg",
     socials: {
       github: "https://github.com/Nitish-Appireddypally",
       instagram: "https://www.instagram.com/_nitish_yadav.__/",
@@ -184,7 +184,7 @@ export const t26 = [
     name: "P Sandeep Chowdary",
     position: "Technical Member",
     alt: "P Sandeep Chowdary",
-    image: "Team/t26/P_SANDEEP_CHOWDARY.jpg",
+    image: "Team/t26/sandeep.jpg",
     socials: {
       github: "",
       instagram: "",
@@ -196,7 +196,7 @@ export const t26 = [
     name: "Sravya Lingisetty",
     position: "Promotions",
     alt: "Sravya Lingisetty",
-    image: "Team/t26/SRAVYA_LINGISETTY.jpg",
+    image: "Team/t26/sravya.jpg",
     socials: {
       github: "",
       instagram: "",
@@ -208,7 +208,7 @@ export const t26 = [
     name: "Besta Dinesh",
     position: "Technical Member",
     alt: "Dinesh",
-    image:"dinesh.jpg",
+    image:"Team/t26/dinesh.jpg",
     socials:{
       github: "",
       instagram: "",
