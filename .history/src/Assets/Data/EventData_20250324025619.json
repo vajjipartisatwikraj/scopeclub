@@ -104,7 +104,7 @@
     "date": "12-OCT 2020",
     "time": "9:30 AM",
     "venue": "MLRIT",
-    "image": "images/codewars.png",
+    "image": "images/zenith.png",
     "image2": "Events/CODEWARS.webp",
     "description": "A Coding Contest on Coding Ninjas platform.",
     "status": "0"
@@ -115,7 +115,7 @@
     "date": "4-MAY 2023",
     "time": "9:30 AM",
     "venue": "MLRIT",
-    "image": "images/appfiesta.png",
+    "image": "images/zenith.png",
     "image2": "Events/Appfiesta.jpeg",
     "description": "Hackathon  on Mobile Application Development.",
     "status": "0"
