@@ -1,32 +1,36 @@
-import "./Events.css";
-import EventCard from "./EventCard";
-import ed from "../../Assets/Data/EventData";
+import "./Resources.css";
+import ResourceCard from "./ResourceCard";
+import ResourceDropdown from "./ResourceDropdown";
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import categoriesData from "../../Assets/Data/ResourcesData.json";
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+function Resources() {
+  const [selectedCategory, setSelectedCategory] = useState("Web Dev");
+  const [resources, setResources] = useState({});
 
-function Events() {
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top on mount
-  }, []);
+  // Format categories for dropdown based on existing data
+  const dropdownOptions = Object.keys(categoriesData).map(category => ({
+    value: category,
+    label: category
+  }));
 
-  
-  const [event, setEvent] = useState(ed);
-  const [activeButton, setActiveButton] = useState("past"); // Default to past events
-  
-  const filterItem = (categItem) => {
-    const updatedItems = ed.filter((eve) => {
-      return eve.status === categItem;
-    });
-    setEvent(updatedItems);
-    setActiveButton(categItem === "0" ? "past" : "upcoming");
+  // Handle category change using the dropdown
+  const handleCategoryChange = (option) => {
+    setSelectedCategory(option.value);
+    setResources(categoriesData[option.value] || {});
   };
 
+  // Set initial resources when component mounts
+  useEffect(() => {
+    setResources(categoriesData[selectedCategory] || {});
+  }, [selectedCategory]);
+  
+  // Animation effects for headings
   const headingsRef = useRef([]);
 
   useEffect(() => {
@@ -73,18 +77,20 @@ function Events() {
     });
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on mount
+  }, []);
+
   return (
-    <div>
+    <div className="resources-container">
       <div className="green-container">
         <div className="top-layer">
           <div className="hw-container">
             <p className="hw-text">Hello, World<span className="fontChange">!</span></p>
             <div className="hw-arrow"></div>
           </div>
-          <h1 ref={(el) => (headingsRef.current[0] = el)} className="head">Explore the <span className="highlighted">Scope </span>Events.</h1>
-          <p className="caption">"Coming together is a beginning, staying together is progress, and
-          working together is success."
-          – Henry Ford</p>
+          <h1 ref={(el) => (headingsRef.current[0] = el)} className="head">Explore our <span className="highlighted">Resources</span>.</h1>
+          <p className="caption">Access our curated collection of learning materials, tools, and references.</p>
         </div>
         <div className="inner-container">
           <div className="grid-image-left"></div>
@@ -98,45 +104,35 @@ function Events() {
         </div>
       </div>
 
-      <div className="but">
-        <a 
-          onClick={() => filterItem("0")} 
-          className={`btn41-44 btn-41 ${activeButton === "past" ? "active" : ""}`}
-        >
-          Past Events
-        </a>
-        <a 
-          onClick={() => filterItem("1")} 
-          className={`btn41-45 btn-41 ${activeButton === "upcoming" ? "active" : ""}`}
-        >
-          Upcoming Events
-        </a>
-      </div>
-        <div className="events1"
-        >
-          <AnimatePresence>
-            {event.map((e) => (
-              <div key={e.id}>
-                <EventCard
-                  title={e.title}
-                  date={e.date}
-                  time={e.time}
-                  venue={e.venue}
-                  image={e.image}
-                  image2={e.image2}
-                  desc={e.description}
-                  extras={e.extras}
-                  status={e.status}
-                  prize={e.prize}
-                  registrationLink={e.registrationLink}
+      {/* Premium styled dropdown */}
+      <ResourceDropdown 
+        options={dropdownOptions}
+        defaultOption={dropdownOptions.find(option => option.value === selectedCategory)}
+        onChange={handleCategoryChange}
+        greenStyle={true} // Use green styling
+      />
+
+      <div className="rs-body">
+        <div className="resource-section">
+          <h2 className="section-title">{selectedCategory}</h2>
+          <div className="courses">
+            <div className="tech-list">
+              {Object.entries(resources).map(([techName, details]) => (
+                <ResourceCard
+                  key={techName}
+                  title={details.title}
+                  desc={details.desc}
+                  image={details.image}
+                  vlink={details.vlink}
+                  nlink={details.nlink}
                 />
-              </div>
-            ))}
-          </AnimatePresence>
+              ))}
+            </div>
+          </div>
         </div>
-      
+      </div>
     </div>
   );
 }
 
-export default Events;
+export default Resources;

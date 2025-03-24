@@ -37,8 +37,6 @@
     inset 0 1px 1px rgba(255, 255, 255, 0.1);
   transform-style: preserve-3d;
   user-select: none;
-  white-space: nowrap;
-  text-align: center;
 }
 
 /* Past Events Button */
@@ -195,60 +193,63 @@
   }
   
   .btn-41 {
-    min-width: 145px;
+    min-width: 130px;
     height: 45px;
-    padding: 0 15px;
-    font-size: 12px;
-    letter-spacing: 0.2px;
-    white-space: nowrap;
+    padding: 0 18px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  /* Ensure text is always white and centered */
+  /* Ensure text is always white */
   .btn41-44, .btn41-45 {
     color: white !important;
-    text-align: center;
+  }
+  
+  /* Ensure buttons have equal height */
+  .btn41-44, .btn41-45 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 45px;
-    white-space: nowrap;
+    min-width: 130px;
+    width: 100%;
   }
   
-  /* For extra small screens */
+  /* Smaller device adjustments */
   @media screen and (max-width: 400px) {
     .but {
-      flex-direction: row;
+      flex-direction: row; /* Keep buttons side by side */
       justify-content: center;
+      width: 100%;
       gap: 10px;
-      padding: 0 5px;
     }
     
     .btn-41 {
-      min-width: 140px;
-      width: 140px;
-      font-size: 11px;
-      padding: 0 10px;
-      letter-spacing: 0px;
+      min-width: 0;
+      width: 45%;
+      font-size: 12px;
+      padding: 0 12px;
     }
   }
 }
 
-/* Ensure consistent text color & position across all states */
-.btn41-44, 
-.btn41-45, 
-.btn41-44:hover, 
-.btn41-45:hover, 
-.btn41-44.active, 
+/* Make upcoming events button green with white text */
 .btn41-45.active {
+  background: rgba(54, 190, 0, 0.3);
   color: white !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  white-space: nowrap;
+}
+
+/* Make past events button have white text */
+.btn41-44 {
+  color: white !important;
+}
+
+/* Ensure text is white on hover */
+.btn41-44:hover, .btn41-45:hover {
+  color: white !important;
 }
 
 .events1 {

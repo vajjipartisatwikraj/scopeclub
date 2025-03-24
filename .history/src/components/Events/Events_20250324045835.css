@@ -1,0 +1,304 @@
+.events-h >h3 {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.but {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 50px 0;
+  perspective: 1000px;
+}
+
+.btn-41 {
+  position: relative;
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-family: 'turnkey-medium', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow: hidden;
+  user-select: none;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Past Events Button - Sleek Dark Theme */
+.btn41-44 {
+  background: linear-gradient(145deg, #1c1c1c, #0a0a0a);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(80, 80, 80, 0.3);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.btn41-44:hover {
+  color: #fff;
+  background: linear-gradient(145deg, #222222, #111111);
+  border-color: rgba(100, 100, 100, 0.4);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.4),
+    0 0 10px rgba(255, 255, 255, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px) translateZ(10px);
+}
+
+.btn41-44:active {
+  transform: translateY(-1px) translateZ(5px);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.btn41-44::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -110%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: all 0.6s ease;
+}
+
+.btn41-44:hover::before {
+  left: 110%;
+}
+
+/* Upcoming Events Button - Vibrant Green Theme */
+.btn41-45 {
+  background: linear-gradient(145deg, rgba(54, 190, 0, 0.2), rgba(54, 190, 0, 0.1));
+  color: #36be00;
+  border: 1px solid rgba(54, 190, 0, 0.3);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(54, 190, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 5px rgba(54, 190, 0, 0.3);
+}
+
+.btn41-45:hover {
+  background: linear-gradient(145deg, rgba(54, 190, 0, 0.3), rgba(54, 190, 0, 0.2));
+  color: #fff;
+  border-color: rgba(54, 190, 0, 0.5);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(54, 190, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px) translateZ(10px);
+}
+
+.btn41-45:active {
+  transform: translateY(-1px) translateZ(5px);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(54, 190, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.btn41-45::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -110%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(54, 190, 0, 0.2),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: all 0.6s ease;
+}
+
+.btn41-45:hover::before {
+  left: 110%;
+}
+
+/* Enhanced Active States */
+.btn41-44.active {
+  background: linear-gradient(145deg, #242424, #121212);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(255, 255, 255, 0.05),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: translateY(-3px) translateZ(5px);
+  border-color: rgba(120, 120, 120, 0.5);
+}
+
+.btn41-45.active {
+  background: linear-gradient(145deg, rgba(54, 190, 0, 0.35), rgba(54, 190, 0, 0.25));
+  color: white;
+  transform: translateY(-3px) translateZ(5px);
+  border-color: rgba(54, 190, 0, 0.6);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(54, 190, 0, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+/* Premium Pulsing Effect */
+@keyframes premium-pulse {
+  0% {
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.5),
+      0 0 0 0 rgba(54, 190, 0, 0.7),
+      inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.5),
+      0 0 25px 5px rgba(54, 190, 0, 0.3),
+      inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.5),
+      0 0 0 0 rgba(54, 190, 0, 0.7),
+      inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.btn41-45.active {
+  animation: premium-pulse 2s infinite;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+  .Events {
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+  }
+  .events-h {
+    font-size: 3.75rem;
+  }
+  .but {
+    gap: 16px;
+    margin: 40px 0;
+  }
+  
+  .btn-41 {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .but {
+    gap: 12px;
+  }
+  
+  .btn-41 {
+    padding: 10px 18px;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+  }
+}
+
+.events1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  max-width: 1400px;
+}
+
+/* Filter button styling */
+.but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.btn41-44, .btn41-45 {
+  padding: 10px 24px;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  z-index: 1;
+  color: white;
+  margin: 0 10px;
+  border-radius: 4px;
+  font-family: 'turnkey-light';
+}
+
+.btn41-44:after, .btn41-45:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #36be00;
+  transition: all 0.3s ease;
+}
+
+.btn41-44:hover, .btn41-45:hover {
+  color: rgb(0, 0, 0);
+  border-color: #36be00;
+}
+
+.btn41-44:hover:after, .btn41-45:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+/* Staggered animation for cards */
+.events1 > div {
+  opacity: 0;
+  animation: staggerFadeIn 0.5s ease forwards;
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply staggered delay to each card */
+.events1 > div:nth-child(1) { animation-delay: 0.1s; }
+.events1 > div:nth-child(2) { animation-delay: 0.2s; }
+.events1 > div:nth-child(3) { animation-delay: 0.3s; }
+.events1 > div:nth-child(4) { animation-delay: 0.4s; }
+.events1 > div:nth-child(5) { animation-delay: 0.5s; }
+.events1 > div:nth-child(6) { animation-delay: 0.6s; }

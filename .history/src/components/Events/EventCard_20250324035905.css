@@ -290,7 +290,10 @@
   transition: -webkit-line-clamp 0.4s ease, color 0.3s ease;
 }
 
-
+.event:hover .txt {
+  -webkit-line-clamp: 4;
+  color: rgba(255, 255, 255, 0.8);
+}
 
 /* Button styling */
 .details {
@@ -351,7 +354,7 @@
 @media screen and (max-width: 450px) {
   .event {
     width: 280px;
-    height: 430px;
+    height: 360px;
   }
   
   .EventCard {
@@ -382,8 +385,8 @@
   border-radius: 16px;
   width: 85%;
   max-width: 650px;
-  height: 600px;
-  background: #171717;
+  max-height: 85vh;
+  background: #111111;
   color: white;
   box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(54, 190, 0, 0.1);
   overflow: hidden;
@@ -392,7 +395,7 @@
 }
 
 .event-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(8px);
 }
 
@@ -403,10 +406,7 @@
 .event-dialog-content {
   position: relative;
   height: 100%;
-  max-height: 85vh;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
 }
 
 .event-dialog-close {
@@ -491,9 +491,7 @@
 
 .event-dialog-body {
   padding: 22px;
-  background: linear-gradient(to bottom, #171717, #1a1a1a);
-  flex: 1;
-  overflow-y: auto;
+  background: linear-gradient(to bottom, #111111, #151515);
 }
 
 .event-dialog-details {
@@ -534,21 +532,11 @@
 
 .event-dialog-description p {
   font-family: 'turnkey-light', sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 25px;
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  text-align: left;
-}
-
-.event-dialog-description {
-  width: 100%;
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: normal;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
 }
 
 .event-dialog-poster {
@@ -569,83 +557,13 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Add register button styles */
-.event-dialog-register {
-  margin: 25px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.register-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #36be00;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-family: 'turnkey-medium', sans-serif;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: none;
-  box-shadow: 0 4px 15px rgba(54, 190, 0, 0.3);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
-}
-
-.register-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(-100%) rotate(45deg);
-  transition: transform 0.6s ease;
-}
-
-.register-button:hover {
-  background: #2fa000;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(54, 190, 0, 0.4);
-}
-
-.register-button:hover::before {
-  transform: translateX(100%) rotate(45deg);
-}
-
-.register-button:active {
-  transform: translateY(1px);
-}
-
-/* Prize detail styling */
-.event-detail-prize {
-  background: rgba(255, 215, 0, 0.08);
-  border-color: rgba(255, 215, 0, 0.2);
-}
-
-.event-detail-prize svg path {
-  stroke: gold;
-}
-
-/* Fix scrollbar for all browsers */
-.event-dialog-content {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(54, 190, 0, 0.3) rgba(0, 0, 0, 0.2);
-}
-
+/* Custom scrollbar for dialog */
 .event-dialog-content::-webkit-scrollbar {
   width: 6px;
 }
 
 .event-dialog-content::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
 }
 
 .event-dialog-content::-webkit-scrollbar-thumb {

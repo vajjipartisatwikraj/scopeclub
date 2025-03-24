@@ -37,8 +37,6 @@
     inset 0 1px 1px rgba(255, 255, 255, 0.1);
   transform-style: preserve-3d;
   user-select: none;
-  white-space: nowrap;
-  text-align: center;
 }
 
 /* Past Events Button */
@@ -185,70 +183,31 @@
   animation: pulse-glow 2s infinite;
 }
 
-/* Improved mobile styling for event filter buttons */
+/* Responsive Adjustments */
 @media screen and (max-width: 600px) {
   .but {
     gap: 15px;
-    margin: 30px 0;
-    width: 100%;
-    padding: 0 20px;
+    margin: 40px 0;
   }
   
   .btn-41 {
-    min-width: 145px;
-    height: 45px;
-    padding: 0 15px;
-    font-size: 12px;
-    letter-spacing: 0.2px;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Ensure text is always white and centered */
-  .btn41-44, .btn41-45 {
-    color: white !important;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    white-space: nowrap;
-  }
-  
-  /* For extra small screens */
-  @media screen and (max-width: 400px) {
-    .but {
-      flex-direction: row;
-      justify-content: center;
-      gap: 10px;
-      padding: 0 5px;
-    }
-    
-    .btn-41 {
-      min-width: 140px;
-      width: 140px;
-      font-size: 11px;
-      padding: 0 10px;
-      letter-spacing: 0px;
-    }
+    min-width: 140px;
+    padding: 12px 18px;
+    font-size: 14px;
   }
 }
 
-/* Ensure consistent text color & position across all states */
-.btn41-44, 
-.btn41-45, 
-.btn41-44:hover, 
-.btn41-45:hover, 
-.btn41-44.active, 
-.btn41-45.active {
-  color: white !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  white-space: nowrap;
+@media screen and (max-width: 450px) {
+  .but {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .btn-41 {
+    width: 80%;
+    min-width: auto;
+  }
 }
 
 .events1 {

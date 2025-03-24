@@ -17,14 +17,11 @@ function Events() {
 
   
   const [event, setEvent] = useState(ed);
-  const [activeButton, setActiveButton] = useState("past"); // Default to past events
-  
   const filterItem = (categItem) => {
     const updatedItems = ed.filter((eve) => {
       return eve.status === categItem;
     });
     setEvent(updatedItems);
-    setActiveButton(categItem === "0" ? "past" : "upcoming");
   };
 
   const headingsRef = useRef([]);
@@ -99,16 +96,10 @@ function Events() {
       </div>
 
       <div className="but">
-        <a 
-          onClick={() => filterItem("0")} 
-          className={`btn41-44 btn-41 ${activeButton === "past" ? "active" : ""}`}
-        >
+        <a onClick={() => filterItem("0")} class="btn41-44 btn-41">
           Past Events
         </a>
-        <a 
-          onClick={() => filterItem("1")} 
-          className={`btn41-45 btn-41 ${activeButton === "upcoming" ? "active" : ""}`}
-        >
+        <a onClick={() => filterItem("1")} class="btn41-45 btn-41">
           Upcoming Events
         </a>
       </div>
@@ -116,8 +107,9 @@ function Events() {
         >
           <AnimatePresence>
             {event.map((e) => (
-              <div key={e.id}>
+              <div>
                 <EventCard
+                  key={e.id}
                   title={e.title}
                   date={e.date}
                   time={e.time}
@@ -126,9 +118,6 @@ function Events() {
                   image2={e.image2}
                   desc={e.description}
                   extras={e.extras}
-                  status={e.status}
-                  prize={e.prize}
-                  registrationLink={e.registrationLink}
                 />
               </div>
             ))}

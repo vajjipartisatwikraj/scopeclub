@@ -6,9 +6,20 @@ function EventCard(props) {
   const imageUrl = `url(${process.env.PUBLIC_URL}/${props.image})`; // Assuming props.image is a valid path
   const imageUrl2 = `url(${process.env.PUBLIC_URL}/${props.image2})`;
   const dialogRef = useRef(null);
+  const dialogContentRef = useRef(null);
+  const [isIOS, setIsIOS] = useState(false);
   
   // Debug state
   const [debugInfo, setDebugInfo] = useState({});
+  
+  // Detect iOS device
+  useEffect(() => {
+    const checkIOS = () => {
+      const userAgent = window.navigator.userAgent.toLowerCase();
+      return /iphone|ipad|ipod/.test(userAgent);
+    };
+    setIsIOS(checkIOS());
+  }, []);
   
   // Setup ESC key handler
   useEffect(() => {
@@ -35,14 +46,36 @@ function EventCard(props) {
   const openDialog = (e) => {
     e.preventDefault();
     if (dialogRef.current) {
-      dialogRef.current.showModal();
+      // iOS workaround for dialog element
+      if (isIOS) {
+        dialogRef.current.setAttribute('open', '');
+        document.body.classList.add('ios-modal-open');
+        // Prevent background scrolling on iOS
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        document.body.style.top = `-${window.scrollY}px`;
+      } else {
+        dialogRef.current.showModal();
+      }
       document.body.classList.add('modal-open');
     }
   };
 
   const closeDialog = () => {
     if (dialogRef.current) {
-      dialogRef.current.close();
+      // iOS workaround for dialog element
+      if (isIOS) {
+        dialogRef.current.removeAttribute('open');
+        document.body.classList.remove('ios-modal-open');
+        // Restore scrolling on iOS
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      } else {
+        dialogRef.current.close();
+      }
       document.body.classList.remove('modal-open');
     }
   };
@@ -77,7 +110,7 @@ function EventCard(props) {
               </h2>
               <h3 className="detail">{props.date}</h3>
               <h3 className="detail">{props.venue}</h3>
-              <h3 className="txt">{props.desc}</h3>
+              <p className="txt">{props.desc}</p>
             </div>
             <a href="#" className="details" onClick={openDialog}>
               More Info
@@ -87,8 +120,8 @@ function EventCard(props) {
       </div>
       
       {/* Event Dialog - Enhanced Version */}
-      <dialog ref={dialogRef} className="event-dialog">
-        <div className="event-dialog-content">
+      <dialog ref={dialogRef} className={`event-dialog ${isIOS ? 'ios-dialog' : ''}`}>
+        <div ref={dialogContentRef} className="event-dialog-content">
           <button className="event-dialog-close" onClick={closeDialog}>×</button>
           
           <div className="event-dialog-header">

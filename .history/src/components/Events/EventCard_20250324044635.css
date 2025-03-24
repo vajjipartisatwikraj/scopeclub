@@ -290,8 +290,6 @@
   transition: -webkit-line-clamp 0.4s ease, color 0.3s ease;
 }
 
-
-
 /* Button styling */
 .details {
   display: inline-block;
@@ -382,7 +380,7 @@
   border-radius: 16px;
   width: 85%;
   max-width: 650px;
-  height: 600px;
+  max-height: 85vh;
   background: #171717;
   color: white;
   box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(54, 190, 0, 0.1);
@@ -716,5 +714,243 @@
 
 .event-dialog[open] {
   animation: dialogFadeIn 0.3s ease-out;
+}
+
+/* iOS-friendly Modal Implementation */
+.ios-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ios-modal-container {
+  width: 90%;
+  max-width: 650px;
+  max-height: 85%;
+  background: #171717;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(54, 190, 0, 0.1);
+  border: 1px solid rgba(54, 190, 0, 0.15);
+  position: relative;
+}
+
+.ios-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+}
+
+.ios-modal-close:hover {
+  background: #36be00;
+  color: white;
+  transform: scale(1.1);
+}
+
+.ios-modal-header {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+}
+
+.ios-modal-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+}
+
+.ios-modal-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, #171717, transparent);
+}
+
+.ios-modal-logo {
+  position: absolute;
+  bottom: 12px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid rgba(54, 190, 0, 0.2);
+  z-index: 2;
+}
+
+.ios-modal-title {
+  position: absolute;
+  bottom: 20px;
+  left: 95px;
+  font-family: 'turnkey-bold', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  max-width: 75%;
+  line-height: 1.2;
+  z-index: 2;
+}
+
+.ios-modal-body {
+  padding: 22px;
+  background: linear-gradient(to bottom, #171717, #1a1a1a);
+  height: calc(85vh - 190px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ios-modal-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ios-modal-description h3 {
+  font-family: 'turnkey-medium', sans-serif;
+  color: #36be00;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.ios-modal-description p {
+  font-family: 'turnkey-light', sans-serif;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  -webkit-hyphens: auto !important;
+  hyphens: auto !important;
+  text-align: left !important;
+}
+
+.ios-modal-register {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.ios-modal-poster {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ios-modal-poster img {
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .ios-modal-backdrop {
+    position: fixed;
+    overflow: hidden;
+  }
+  
+  .ios-modal-container {
+    max-height: 80vh;
+  }
+  
+  .ios-modal-body {
+    height: auto;
+    max-height: calc(80vh - 190px);
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .ios-modal-container {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .ios-modal-header {
+    height: 160px;
+  }
+  
+  .ios-modal-title {
+    font-size: 1.5rem;
+    left: 20px;
+    bottom: 55px;
+    max-width: 85%;
+  }
+  
+  .ios-modal-logo {
+    bottom: 12px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .ios-modal-body {
+    padding: 18px;
+    padding-top: 25px;
+    height: calc(90vh - 160px);
+  }
+  
+  .ios-modal-description h3 {
+    font-size: 1rem;
+  }
+  
+  .ios-modal-description p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
 }
 

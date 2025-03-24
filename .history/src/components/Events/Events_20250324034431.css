@@ -1,0 +1,208 @@
+.events-h >h3 {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10%;
+  width: 100%;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-bottom: 10%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.btn41-45 {
+  padding: 10px 35px;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-41 {
+  border: 2px solid rgb(255, 255, 255);
+  z-index: 1;
+  color: white;
+}
+
+.btn-41:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+
+.btn-41:hover {
+  color: rgb(0, 0, 0);
+}
+
+.btn-41:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-41:active {
+  top: 2px;
+}
+
+.btn41-44 {
+  padding: 10px 50px;
+  margin-right: 20px;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .Events {
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+  }
+  .events-h {
+    font-size: 3.75rem;
+  }
+  .but {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn41-44 {
+    padding: 8px 30px;
+  }
+
+  .btn41-45 {
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 450px){
+  .events-h{
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.events1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  max-width: 1400px;
+}
+
+/* Filter button styling */
+.but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.btn41-44, .btn41-45 {
+  padding: 10px 24px;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  z-index: 1;
+  color: white;
+  margin: 0 10px;
+  border-radius: 4px;
+  font-family: 'turnkey-light';
+}
+
+.btn41-44:after, .btn41-45:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #36be00;
+  transition: all 0.3s ease;
+}
+
+.btn41-44:hover, .btn41-45:hover {
+  color: rgb(0, 0, 0);
+  border-color: #36be00;
+}
+
+.btn41-44:hover:after, .btn41-45:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+/* Staggered animation for cards */
+.events1 > div {
+  opacity: 0;
+  animation: staggerFadeIn 0.5s ease forwards;
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply staggered delay to each card */
+.events1 > div:nth-child(1) { animation-delay: 0.1s; }
+.events1 > div:nth-child(2) { animation-delay: 0.2s; }
+.events1 > div:nth-child(3) { animation-delay: 0.3s; }
+.events1 > div:nth-child(4) { animation-delay: 0.4s; }
+.events1 > div:nth-child(5) { animation-delay: 0.5s; }
+.events1 > div:nth-child(6) { animation-delay: 0.6s; }
+
+/* Add this to your existing Events.css */
+.active-filter {
+  background: rgba(54, 190, 0, 0.1) !important;
+  border-color: #36be00 !important;
+  color: #36be00 !important;
+}
+
+.active-filter:after {
+  width: 100% !important;
+  left: auto !important;
+  right: 0 !important;
+  background: rgba(54, 190, 0, 0.1) !important;
+}

@@ -12,8 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 function Resources() {
   const [selectedCategory, setSelectedCategory] = useState("Web Dev");
   const [resources, setResources] = useState({});
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
 
   useEffect(() => {
     setResources(categoriesData[selectedCategory] || {});
@@ -65,33 +63,6 @@ function Resources() {
     });
   }, []);
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
-  const selectOption = (category) => {
-    setSelectedCategory(category);
-    setDropdownOpen(false);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-    };
-
-    if (dropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [dropdownOpen]);
-
   return (
     <div>
       <div className="resources">
@@ -103,26 +74,18 @@ function Resources() {
           <p className="rs-caption">We transform coding passion into real-world projects, turning ideas into impactful experiences through collaboration, guidance, and hands-on learning.</p>
         </div>
         <div className="rs-body">
-          <div className="custom-dropdown-container" ref={dropdownRef}>
-            <button className="custom-dropdown-button" onClick={toggleDropdown}>
-              <span className="dropdown-dot"></span>
-              <span>{selectedCategory}</span>
-              <span className="dropdown-arrow"></span>
-            </button>
-            
-            {dropdownOpen && (
-              <div className="custom-dropdown-menu">
-                {Object.keys(categoriesData).map((category, index) => (
-                  <div 
-                    key={index} 
-                    className={`custom-dropdown-item ${category === selectedCategory ? 'active' : ''}`}
-                    onClick={() => selectOption(category)}
-                  >
-                    {category}
-                  </div>
-                ))}
-              </div>
-            )}
+          <div className="rs-dropdown">
+            <select 
+              onChange={(e) => setSelectedCategory(e.target.value)} 
+              value={selectedCategory} 
+              className="dropdown"
+            >
+              {Object.keys(categoriesData).map((category, index) => (
+                <option className="rs-domain" key={index} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
           </div>
             {Object.entries(resources).map(([section, technologies]) => (
               <div key={section} className="resource-section">

@@ -77,7 +77,7 @@ function EventCard(props) {
               </h2>
               <h3 className="detail">{props.date}</h3>
               <h3 className="detail">{props.venue}</h3>
-              <h3 className="txt">{props.desc}</h3>
+              <p className="txt">{props.desc}</p>
             </div>
             <a href="#" className="details" onClick={openDialog}>
               More Info

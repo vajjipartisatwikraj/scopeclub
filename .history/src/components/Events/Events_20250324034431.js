@@ -17,15 +17,20 @@ function Events() {
 
   
   const [event, setEvent] = useState(ed);
-  const [activeButton, setActiveButton] = useState("past"); // Default to past events
-  
+  const [activeFilter, setActiveFilter] = useState("0"); // Default to past events
+
   const filterItem = (categItem) => {
+    setActiveFilter(categItem);
     const updatedItems = ed.filter((eve) => {
       return eve.status === categItem;
     });
     setEvent(updatedItems);
-    setActiveButton(categItem === "0" ? "past" : "upcoming");
   };
+
+  useEffect(() => {
+    // Initial filter
+    filterItem("0");
+  }, []); 
 
   const headingsRef = useRef([]);
 
@@ -101,40 +106,42 @@ function Events() {
       <div className="but">
         <a 
           onClick={() => filterItem("0")} 
-          className={`btn41-44 btn-41 ${activeButton === "past" ? "active" : ""}`}
+          className={`btn41-44 btn-41 ${activeFilter === "0" ? "active-filter" : ""}`}
         >
           Past Events
         </a>
         <a 
           onClick={() => filterItem("1")} 
-          className={`btn41-45 btn-41 ${activeButton === "upcoming" ? "active" : ""}`}
+          className={`btn41-45 btn-41 ${activeFilter === "1" ? "active-filter" : ""}`}
         >
           Upcoming Events
         </a>
       </div>
-        <div className="events1"
-        >
-          <AnimatePresence>
-            {event.map((e) => (
-              <div key={e.id}>
-                <EventCard
-                  title={e.title}
-                  date={e.date}
-                  time={e.time}
-                  venue={e.venue}
-                  image={e.image}
-                  image2={e.image2}
-                  desc={e.description}
-                  extras={e.extras}
-                  status={e.status}
-                  prize={e.prize}
-                  registrationLink={e.registrationLink}
-                />
-              </div>
-            ))}
-          </AnimatePresence>
-        </div>
-      
+      <div className="events1">
+        <AnimatePresence>
+          {event.map((e) => (
+            <motion.div
+              key={e.id}
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <EventCard
+                title={e.title}
+                date={e.date}
+                time={e.time}
+                venue={e.venue}
+                image={e.image}
+                image2={e.image2}
+                desc={e.description}
+                extras={e.extras}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

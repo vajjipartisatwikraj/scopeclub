@@ -1,14 +1,11 @@
 import "./EventCard.css";
 import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 
 function EventCard(props) {
   const imageUrl = `url(${process.env.PUBLIC_URL}/${props.image})`; // Assuming props.image is a valid path
   const imageUrl2 = `url(${process.env.PUBLIC_URL}/${props.image2})`;
   const dialogRef = useRef(null);
-  
-  // Debug state
-  const [debugInfo, setDebugInfo] = useState({});
   
   // Setup ESC key handler
   useEffect(() => {
@@ -19,18 +16,10 @@ function EventCard(props) {
     };
     document.addEventListener('keydown', handleEsc);
     
-    // For debugging
-    setDebugInfo({
-      status: props.status,
-      isUpcoming: props.status === "1",
-      regLink: props.regLink,
-      registrationLink: props.registrationLink
-    });
-    
     return () => {
       document.removeEventListener('keydown', handleEsc);
     };
-  }, [props.status, props.regLink, props.registrationLink]);
+  }, []);
 
   const openDialog = (e) => {
     e.preventDefault();
@@ -49,9 +38,6 @@ function EventCard(props) {
 
   // Check if event is upcoming (status === "1")
   const isUpcoming = props.status === "1";
-  
-  // Use either registrationLink or regLink
-  const registrationUrl = props.registrationLink || props.regLink || "https://linktr.ee/mlritscope";
 
   return (
     <motion.div
@@ -77,7 +63,7 @@ function EventCard(props) {
               </h2>
               <h3 className="detail">{props.date}</h3>
               <h3 className="detail">{props.venue}</h3>
-              <h3 className="txt">{props.desc}</h3>
+              <p className="txt">{props.desc}</p>
             </div>
             <a href="#" className="details" onClick={openDialog}>
               More Info
@@ -151,7 +137,7 @@ function EventCard(props) {
             {/* Registration button for upcoming events */}
             {isUpcoming && (
               <div className="event-dialog-register">
-                <a href={registrationUrl} target="_blank" rel="noopener noreferrer" className="register-button">
+                <a href={props.regLink || "https://linktr.ee/mlritscope"} target="_blank" rel="noopener noreferrer" className="register-button">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H9L11 5H19C20.1 5 21 5.9 21 7V19C21 20.1 20.1 21 19 21Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M12 11V17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -165,13 +151,6 @@ function EventCard(props) {
             <div className="event-dialog-poster">
               <img src={`${process.env.PUBLIC_URL}/${props.image2}`} alt={`${props.title} poster`} />
             </div>
-            
-            {/* Debug info - remove in production */}
-            {false && (
-              <div style={{marginTop: '20px', padding: '10px', background: '#333', fontSize: '12px'}}>
-                <pre>{JSON.stringify(debugInfo, null, 2)}</pre>
-              </div>
-            )}
           </div>
         </div>
       </dialog>

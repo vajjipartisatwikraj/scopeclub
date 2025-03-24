@@ -12,8 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 function Resources() {
   const [selectedCategory, setSelectedCategory] = useState("Web Dev");
   const [resources, setResources] = useState({});
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     setResources(categoriesData[selectedCategory] || {});
@@ -66,31 +65,14 @@ function Resources() {
   }, []);
 
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const selectOption = (category) => {
+  const handleOptionClick = (category) => {
     setSelectedCategory(category);
-    setDropdownOpen(false);
+    setResources(categoriesData[category] || {});
+    setIsDropdownOpen(false);
   };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-    };
-
-    if (dropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [dropdownOpen]);
 
   return (
     <div>
@@ -103,26 +85,31 @@ function Resources() {
           <p className="rs-caption">We transform coding passion into real-world projects, turning ideas into impactful experiences through collaboration, guidance, and hands-on learning.</p>
         </div>
         <div className="rs-body">
-          <div className="custom-dropdown-container" ref={dropdownRef}>
-            <button className="custom-dropdown-button" onClick={toggleDropdown}>
-              <span className="dropdown-dot"></span>
-              <span>{selectedCategory}</span>
-              <span className="dropdown-arrow"></span>
-            </button>
-            
-            {dropdownOpen && (
-              <div className="custom-dropdown-menu">
+          <div className="tech-select-container">
+            <div 
+              className={`tech-select ${isDropdownOpen ? 'open' : ''}`}
+              onClick={toggleDropdown}
+            >
+              <div className="tech-select-header">
+                <div className="tech-select-value">{selectedCategory}</div>
+                <div className="tech-select-arrow"></div>
+              </div>
+              
+              <div className="tech-select-dropdown">
                 {Object.keys(categoriesData).map((category, index) => (
                   <div 
                     key={index} 
-                    className={`custom-dropdown-item ${category === selectedCategory ? 'active' : ''}`}
-                    onClick={() => selectOption(category)}
+                    className={`tech-select-option ${category === selectedCategory ? 'selected' : ''}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleOptionClick(category);
+                    }}
                   >
                     {category}
                   </div>
                 ))}
               </div>
-            )}
+            </div>
           </div>
             {Object.entries(resources).map(([section, technologies]) => (
               <div key={section} className="resource-section">
