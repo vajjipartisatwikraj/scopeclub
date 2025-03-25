@@ -677,12 +677,12 @@ body {
 }
 
 /* Animation pauses on hover */
-.logo-track:hover { 
+.logo-track:hover {
   animation-play-state: paused;
 }
 
 .end-footer{
-  height: 15px;
+  height: 25px;
   width: 100%;
   background-color: #36be00;
 }
