@@ -312,7 +312,7 @@
   justify-content: center;
   gap: 10px;
   position: relative;
-  top: 0%;
+  top: -10%;
 }
 
 /* Responsive adjustments */
@@ -399,10 +399,6 @@
     width: 15.1875rem;
     height: 15.1875rem;
     position: absolute;
-  }
-
-  .resources-contents-container{
-    top: -10%;
   }
 }
 

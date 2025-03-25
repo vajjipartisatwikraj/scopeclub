@@ -425,7 +425,7 @@ body {
   height: 70vh;
   padding-top: 50px;
   margin-bottom: 200px;
-  margin: 140px;
+  margin: 200px;
   display: flex;
   flex-direction: column;
   gap: 20%;
@@ -563,8 +563,10 @@ body {
   width: 100vw;
   height: 100%;
   display: flex;
+  padding: 12%;
   flex-direction: column;
-  padding:140px
+  padding-top: 15%;
+  padding-bottom: 10%;
 }
 
 .explore-resources-caption{
@@ -687,26 +689,28 @@ body {
   background-color: #36be00;
 }
 
-/* Increase social media icon size */
-svg.twitter, svg.instagram, svg.linkedIn, svg.github {
-  height: 36px;  /* Increased from 30px */
-  width: 36px;   /* Increased from 30px */
+svg.twitter, svg.instagram, svg.linkedIn, svg.github{
+  height: 30px;
+  width: 30px;
   margin-top: 10px;
 }
 
-/* Adjust spacing between icons */
+
+/* Social media icon links with glow effect */
 .social-link {
   display: inline-block;
-  margin: 0px;  /* Increased from 10px to provide more spacing between larger icons */
   transition: all 0.3s ease;
   position: relative;
-  gap: 0px;
 }
 
-/* Make the hover effect slightly more pronounced for larger icons */
+.social-link svg {
+  transition: all 0.3s ease;
+}
+
+/* Glow effect on hover */
 .social-link:hover svg {
-  filter: drop-shadow(0 0 10px rgba(51, 217, 11, 0.8));
-  transform: scale(1.15);
+  filter: drop-shadow(0 0 8px rgba(51, 217, 11, 0.8));
+  transform: scale(1.1);
 }
 
 /* Specific glow colors for each platform */
@@ -725,6 +729,8 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
 .social-link:hover .github {
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
 }
+
+
 
 /* Size variation for logos entering and exiting */
 @keyframes logo-grow-enter {
@@ -888,8 +894,6 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
 
   .explore-resources{
     padding: 5%;
-    margin-top: 35%;
-    margin-bottom: 25%;
   }
 
   .brand-events-caption{
@@ -966,7 +970,6 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
 
   .explore-resources-btn{
     width: 30%;
-    height: 10%;
   }
 }
 
@@ -1012,49 +1015,5 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
   
   .resorces-logos {
     padding: 25px 0;
-  }
-}
-
-/* Ensure mobile responsiveness with larger icons */
-@media screen and (max-width: 768px) {
-  svg.twitter, svg.instagram, svg.linkedIn, svg.github {
-    height: 30px;
-    width: 30px;
-  }
-  
-  .social-link {
-    margin: 0px;
-  }
-}
-
-/* Fixed navbar for mobile screens */
-@media screen and (max-width: 768px) {
-  .navbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: none !important;
-    transform: none !important;
-    animation: none !important;
-  }
-  
-  /* Add padding to body to prevent content from going under the navbar */
-  body {
-    padding-top: 56px; /* Adjust based on your navbar height */
-  }
-  
-  /* Ensure the menu button is always visible */
-  .navbar-toggler {
-    display: block;
-    opacity: 1 !important;
-  }
-  
-  /* Make sure dropdown menus appear below the navbar */
-  .navbar-collapse {
-    max-height: calc(100vh - 56px);
-    overflow-y: auto;
   }
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../App.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useNavigate } from 'react-router-dom';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,8 +114,6 @@ function Home() {
     });
   }, []);
 
-  const navigate = useNavigate();
-
   return (
     <div>
       <div className="green-container">
@@ -200,104 +198,56 @@ function Home() {
       
       </div>
       <div className="explore-resources">
-        <h2 ref={(el) => (headingsRef.current[3] = el)} className="explore-resources-head">Explore our <span className="highlighted">resources</span>.</h2>
+        <h2 className="explore-resources-head">Explore our <span className="highlighted">resources</span>.</h2>
         <p className="explore-resources-caption">At SCOPE Club, we believe in empowering students with the tools and knowledge they need to succeed. Our resources are designed to help you learn, grow, and excel in your coding journey.</p>
         <div className="resorces-logos">
           <div className="logo-carousel">
             <div className="logo-track track-left">
-              {/* First row - naturally white/monochrome logos */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/react/white" alt="React" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/javascript/white" alt="JavaScript" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/python/white" alt="Python" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/nodedotjs/white" alt="Node.js" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/angular/white" alt="Angular" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/vuedotjs/white" alt="Vue" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/typescript/white" alt="TypeScript" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/html5/white" alt="HTML5" />
-              </div>
+              {/* First row - left to right */}
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /></div>
               
               {/* Duplicate set for seamless loop */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/react/white" alt="React" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/javascript/white" alt="JavaScript" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/python/white" alt="Python" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/nodedotjs/white" alt="Node.js" />
-              </div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /></div>
             </div>
             
             <div className="logo-track track-right">
-              {/* Second row - naturally white/monochrome logos */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/mongodb/white" alt="MongoDB" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/docker/white" alt="Docker" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/firebase/white" alt="Firebase" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/figma/white" alt="Figma" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/css3/white" alt="CSS3" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/tensorflow/white" alt="TensorFlow" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt="Java" />
-              </div>
+              {/* Second row - right to left */}
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" /></div>
               
               {/* Duplicate set for seamless loop */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/mongodb/white" alt="MongoDB" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/docker/white" alt="Docker" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/firebase/white" alt="Firebase" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" />
-              </div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" /></div>
+              <div className="logo-slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" /></div>
             </div>
           </div>
         </div>
-        <button 
-          className="explore-resources-btn" 
-          onClick={() => {
-            navigate('/resources');
-            window.scrollTo(0, 0); // Scroll to top after navigation
-          }}
-        >
-          Explore
-        </button>
+        <button className="explore-resources-btn">Explore</button>
       </div>
       
     </div>

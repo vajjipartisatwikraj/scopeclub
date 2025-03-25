@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../App.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useNavigate } from 'react-router-dom';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,48 +73,8 @@ function Home() {
     });
   }, []);
 
-  useEffect(() => {
-    // Size variation animation for logos
-    const leftLogos = document.querySelectorAll('.track-left .logo-slide');
-    const rightLogos = document.querySelectorAll('.track-right .logo-slide');
-    
-    // Create animation for logos entering viewport
-    leftLogos.forEach((logo, index) => {
-      gsap.fromTo(logo, 
-        { scale: 0.8, opacity: 0.7 },
-        { 
-          scale: 1, 
-          opacity: 1,
-          duration: 0.4,
-          scrollTrigger: {
-            trigger: '.resorces-logos',
-            start: 'top bottom',
-            toggleActions: 'play none none reverse'
-          },
-          delay: index * 0.05
-        }
-      );
-    });
-    
-    rightLogos.forEach((logo, index) => {
-      gsap.fromTo(logo, 
-        { scale: 0.8, opacity: 0.7 },
-        { 
-          scale: 1, 
-          opacity: 1,
-          duration: 0.4,
-          scrollTrigger: {
-            trigger: '.resorces-logos',
-            start: 'top bottom',
-            toggleActions: 'play none none reverse'
-          },
-          delay: index * 0.05
-        }
-      );
-    });
-  }, []);
+  
 
-  const navigate = useNavigate();
 
   return (
     <div>
@@ -148,10 +108,9 @@ function Home() {
           </div>
           <div className="is-image">
           <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.68/build/spline-viewer.js"></script>
-            <spline-viewer url="https://prod.spline.design/gfHtOWImHKL9KP6O/scene.splinecode"></spline-viewer>          </div>
+<spline-viewer url="https://prod.spline.design/gfHtOWImHKL9KP6O/scene.splinecode"></spline-viewer>          </div>
         </div>
       </div>
-
       <div className="wdwd">
         <h2 ref={(el) => (headingsRef.current[1] = el)} className="wdwd-head">What do <span className="highlighted">we DO</span>?</h2>
         <div className="wdwd-main-container">
@@ -173,7 +132,7 @@ function Home() {
           <p className="wdwd-03-num">03.</p>
           <div className="wdwd-03">
             <h3 className="wdwd-03-head">Projects</h3>
-            <p className="wdwd-03-content">At SCOPE Club, we believe that coding is more than just solving problems—it's about building real-world solutions. Through our project-based learning approach, we encourage students to collaborate, innovate, and develop projects that have a tangible impact.</p>
+            <p className="wdwd-03-content">At SCOPE Club, we believe that coding is more than just solving problems—it’s about building real-world solutions. Through our project-based learning approach, we encourage students to collaborate, innovate, and develop projects that have a tangible impact.</p>
           </div>
         </div>
         </div>
@@ -197,107 +156,10 @@ function Home() {
         </div>
       </div>
 
-      
-      </div>
       <div className="explore-resources">
-        <h2 ref={(el) => (headingsRef.current[3] = el)} className="explore-resources-head">Explore our <span className="highlighted">resources</span>.</h2>
+        <h2 className="explore-resources-head">Explore our <span className="highlighted">resources</span>.</h2>
         <p className="explore-resources-caption">At SCOPE Club, we believe in empowering students with the tools and knowledge they need to succeed. Our resources are designed to help you learn, grow, and excel in your coding journey.</p>
-        <div className="resorces-logos">
-          <div className="logo-carousel">
-            <div className="logo-track track-left">
-              {/* First row - naturally white/monochrome logos */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/react/white" alt="React" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/javascript/white" alt="JavaScript" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/python/white" alt="Python" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/nodedotjs/white" alt="Node.js" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/angular/white" alt="Angular" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/vuedotjs/white" alt="Vue" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/typescript/white" alt="TypeScript" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/html5/white" alt="HTML5" />
-              </div>
-              
-              {/* Duplicate set for seamless loop */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/react/white" alt="React" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/javascript/white" alt="JavaScript" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/python/white" alt="Python" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/nodedotjs/white" alt="Node.js" />
-              </div>
-            </div>
-            
-            <div className="logo-track track-right">
-              {/* Second row - naturally white/monochrome logos */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/mongodb/white" alt="MongoDB" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/docker/white" alt="Docker" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/firebase/white" alt="Firebase" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/figma/white" alt="Figma" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/css3/white" alt="CSS3" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/tensorflow/white" alt="TensorFlow" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt="Java" />
-              </div>
-              
-              {/* Duplicate set for seamless loop */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/mongodb/white" alt="MongoDB" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/docker/white" alt="Docker" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/firebase/white" alt="Firebase" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <button 
-          className="explore-resources-btn" 
-          onClick={() => {
-            navigate('/resources');
-            window.scrollTo(0, 0); // Scroll to top after navigation
-          }}
-        >
-          Explore
-        </button>
+      </div>
       </div>
       
     </div>

@@ -98,7 +98,7 @@ function Resources() {
         <div className="rs-top-layer">
           <div className="bottom-image"></div>
           <div className="c-circle-light"></div>
-          <div className="resources-contents-container">
+          <div className="resources-container">
             <h2 ref={(el) => (headingsRef.current[0] = el)} className="rs-head"><span className="highlighted">Scope</span> Library.</h2>
             <p className="rs-caption">We transform coding passion into real-world projects, turning ideas into impactful experiences through collaboration, guidance, and hands-on learning.</p>
           </div>

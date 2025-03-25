@@ -291,10 +291,7 @@ function Home() {
         </div>
         <button 
           className="explore-resources-btn" 
-          onClick={() => {
-            navigate('/resources');
-            window.scrollTo(0, 0); // Scroll to top after navigation
-          }}
+          onClick={() => navigate('/resources')}
         >
           Explore
         </button>

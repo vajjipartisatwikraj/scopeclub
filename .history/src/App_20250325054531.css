@@ -425,7 +425,7 @@ body {
   height: 70vh;
   padding-top: 50px;
   margin-bottom: 200px;
-  margin: 140px;
+  margin: 200px;
   display: flex;
   flex-direction: column;
   gap: 20%;
@@ -560,11 +560,13 @@ body {
 }
 
 .explore-resources {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: flex;
+  padding: 13%;
   flex-direction: column;
-  padding:140px
+  padding-top: 0px;
+  padding-bottom: 10%;
 }
 
 .explore-resources-caption{
@@ -577,169 +579,14 @@ body {
 
 .explore-resources-btn{
   font-family: turnkey-bold;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
-  background-color: #36be00;
+  background-color: #33d90b;
   width: 10%;
   border-radius: 27.44px;
   padding: 10px 20px;
-  border: 1px solid white;
+  margin-top: 2%;
 }
-
-
-/* Updated Logo Carousel Styling */
-.resorces-logos {
-  width: 100%;
-  overflow: hidden;
-  padding: 40px 0;
-  position: relative;
-  background: rgba(0, 0, 0, 0.15); /* Lighter, more subtle background */
-  border-radius: 12px;
-  margin: 20px 0;
-}
-
-/* Remove the gradient overlays */
-.resorces-logos::before,
-.resorces-logos::after {
-  display: none; /* Hide the gradient overlays */
-}
-
-/* Also remove track gradients */
-.logo-track::before,
-.logo-track::after {
-  display: none; /* Hide track gradients */
-}
-
-/* Enhance logo visibility */
-.logo-slide img {
-  height: 75%;
-  width: 75%;
-  object-fit: contain;
-  opacity: 0.9; /* Slightly more visible */
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-/* More pronounced hover effect */
-.logo-slide:hover img {
-  transform: scale(1.2);
-  opacity: 1;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
-}
-
-.logo-carousel {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.logo-track {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: fit-content;
-}
-
-.track-left {
-  animation: scroll-left 30s linear infinite;
-}
-
-.track-right {
-  animation: scroll-right 30s linear infinite;
-}
-
-.logo-slide {
-  height: 70px;
-  width: 120px;
-  margin: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.5s ease;
-}
-
-/* Animation keyframes */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/* Animation pauses on hover */
-.logo-track:hover {
-  animation-play-state: paused;
-}
-
-.end-footer{
-  height: 35px;
-  width: 100%;
-  background-color: #36be00;
-}
-
-/* Increase social media icon size */
-svg.twitter, svg.instagram, svg.linkedIn, svg.github {
-  height: 36px;  /* Increased from 30px */
-  width: 36px;   /* Increased from 30px */
-  margin-top: 10px;
-}
-
-/* Adjust spacing between icons */
-.social-link {
-  display: inline-block;
-  margin: 0px;  /* Increased from 10px to provide more spacing between larger icons */
-  transition: all 0.3s ease;
-  position: relative;
-  gap: 0px;
-}
-
-/* Make the hover effect slightly more pronounced for larger icons */
-.social-link:hover svg {
-  filter: drop-shadow(0 0 10px rgba(51, 217, 11, 0.8));
-  transform: scale(1.15);
-}
-
-/* Specific glow colors for each platform */
-.social-link:hover .twitter {
-  filter: drop-shadow(0 0 8px rgba(29, 161, 242, 0.8));
-}
-
-.social-link:hover .instagram {
-  filter: drop-shadow(0 0 8px rgba(225, 48, 108, 0.8));
-}
-
-.social-link:hover .linkedIn {
-  filter: drop-shadow(0 0 8px rgba(0, 119, 181, 0.8));
-}
-
-.social-link:hover .github {
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
-}
-
-/* Size variation for logos entering and exiting */
-@keyframes logo-grow-enter {
-  0% { transform: scale(0.7); opacity: 0.3; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes logo-shrink-exit {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(0.7); opacity: 0.3; }
-}
-
-/* Apply GSAP animations with JavaScript */
-
-
 
 /* Desktop: 2x4 grid */
 @media (min-width: 1024px) {
@@ -875,21 +722,14 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
     font-size: 13px;
   }
 
-  .brand-events-head, .explore-resources-head {
+  .brand-events-head {
     font-size: 37px;
   }
 
   .brand-events {
-    height: 50vh;
     margin: 10px;
-    padding: 3%;
-    margin-top: 30%;
-  }
-
-  .explore-resources{
     padding: 5%;
-    margin-top: 35%;
-    margin-bottom: 25%;
+    margin-top: 30%;
   }
 
   .brand-events-caption{
@@ -904,12 +744,12 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
 
   .flwus-text,.writeus-text,.meet-text{
     font-family: turnkey-medium;
-    font-size: 20px;
+    font-size: 30px;
     color: #33d90b;
   }
 
   .flwus-content,.writeus-content,.meet-content{
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: 0.2px;
   }
 
@@ -931,7 +771,7 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
     height: fit-content;
     width: 15%;
     margin: 3px;
-    margin-top: 10px;
+    margin-top: 0px;
     fill: #fff;
     cursor: pointer;
   }
@@ -942,10 +782,6 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
     overflow: hidden;
     display: flex;
     align-items: center;
-  }
-
-  .end-footer{
-    height: 25px;
   }
   
   spline-viewer {
@@ -963,98 +799,152 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
     gap: 40px;
   }
 
+}
 
-  .explore-resources-btn{
-    width: 30%;
-    height: 10%;
+/* Logo Carousel Animation */
+.resorces-logos {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+  background: rgba(10, 10, 10, 0.2);
+  border-radius: 12px;
+  margin: 40px 0;
+}
+
+.logo-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+.track-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.track-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.logo-slide {
+  height: 70px;
+  width: 120px;
+  margin: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.logo-slide img {
+  height: 75%;
+  width: 75%;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Size variation on hover */
+.logo-slide:hover img {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* Entry and exit animations using pseudo-elements for size changes */
+.logo-track::before,
+.logo-track::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.track-left::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(10, 10, 10, 0.5), transparent);
+}
+
+.track-left::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(10, 10, 10, 0.5), transparent);
+}
+
+.track-right::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(10, 10, 10, 0.5), transparent);
+}
+
+.track-right::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(10, 10, 10, 0.5), transparent);
+}
+
+/* Overlay to create size variation effect */
+.resorces-logos::before,
+.resorces-logos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 15%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.resorces-logos::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(10, 10, 10, 1), transparent);
+}
+
+.resorces-logos::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(10, 10, 10, 1), transparent);
+}
+
+/* Animation keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-/* Mobile adjustments for logo carousel */
-@media screen and (max-width: 768px) {
-  .logo-slide {
-    height: 50px;
-    width: 80px;
-    margin: 0 15px;
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
   }
-  
-  .logo-slide img {
-    height: 65%;
-    width: 65%;
-  }
-  
-  .logo-carousel {
-    gap: 20px;
-  }
-  
-  /* Make animation slightly faster on mobile */
-  .track-left {
-    animation: scroll-left 25s linear infinite;
-  }
-  
-  .track-right {
-    animation: scroll-right 25s linear infinite;
+  100% {
+    transform: translateX(0);
   }
 }
 
-/* Extra small screens */
-@media screen and (max-width: 480px) {
-  .logo-slide {
-    height: 40px;
-    width: 60px;
-    margin: 0 10px;
-  }
-  
-  .logo-carousel {
-    gap: 15px;
-    padding: 0 5px;
-  }
-  
-  .resorces-logos {
-    padding: 25px 0;
-  }
+/* Animation pauses on hover */
+.logo-track:hover {
+  animation-play-state: paused;
 }
 
-/* Ensure mobile responsiveness with larger icons */
-@media screen and (max-width: 768px) {
-  svg.twitter, svg.instagram, svg.linkedIn, svg.github {
-    height: 30px;
-    width: 30px;
-  }
-  
-  .social-link {
-    margin: 0px;
-  }
+/* Size variation for logos entering and exiting */
+@keyframes logo-grow-enter {
+  0% { transform: scale(0.7); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
-/* Fixed navbar for mobile screens */
-@media screen and (max-width: 768px) {
-  .navbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: none !important;
-    transform: none !important;
-    animation: none !important;
-  }
-  
-  /* Add padding to body to prevent content from going under the navbar */
-  body {
-    padding-top: 56px; /* Adjust based on your navbar height */
-  }
-  
-  /* Ensure the menu button is always visible */
-  .navbar-toggler {
-    display: block;
-    opacity: 1 !important;
-  }
-  
-  /* Make sure dropdown menus appear below the navbar */
-  .navbar-collapse {
-    max-height: calc(100vh - 56px);
-    overflow-y: auto;
-  }
+@keyframes logo-shrink-exit {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.7); opacity: 0.3; }
 }
+
+/* Apply GSAP animations with JavaScript */
+

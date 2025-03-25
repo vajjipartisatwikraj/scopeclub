@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../App.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useNavigate } from 'react-router-dom';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,48 +73,8 @@ function Home() {
     });
   }, []);
 
-  useEffect(() => {
-    // Size variation animation for logos
-    const leftLogos = document.querySelectorAll('.track-left .logo-slide');
-    const rightLogos = document.querySelectorAll('.track-right .logo-slide');
-    
-    // Create animation for logos entering viewport
-    leftLogos.forEach((logo, index) => {
-      gsap.fromTo(logo, 
-        { scale: 0.8, opacity: 0.7 },
-        { 
-          scale: 1, 
-          opacity: 1,
-          duration: 0.4,
-          scrollTrigger: {
-            trigger: '.resorces-logos',
-            start: 'top bottom',
-            toggleActions: 'play none none reverse'
-          },
-          delay: index * 0.05
-        }
-      );
-    });
-    
-    rightLogos.forEach((logo, index) => {
-      gsap.fromTo(logo, 
-        { scale: 0.8, opacity: 0.7 },
-        { 
-          scale: 1, 
-          opacity: 1,
-          duration: 0.4,
-          scrollTrigger: {
-            trigger: '.resorces-logos',
-            start: 'top bottom',
-            toggleActions: 'play none none reverse'
-          },
-          delay: index * 0.05
-        }
-      );
-    });
-  }, []);
+  
 
-  const navigate = useNavigate();
 
   return (
     <div>
@@ -200,104 +160,56 @@ function Home() {
       
       </div>
       <div className="explore-resources">
-        <h2 ref={(el) => (headingsRef.current[3] = el)} className="explore-resources-head">Explore our <span className="highlighted">resources</span>.</h2>
+        <h2 className="explore-resources-head">Explore our <span className="highlighted">resources</span>.</h2>
         <p className="explore-resources-caption">At SCOPE Club, we believe in empowering students with the tools and knowledge they need to succeed. Our resources are designed to help you learn, grow, and excel in your coding journey.</p>
         <div className="resorces-logos">
           <div className="logo-carousel">
             <div className="logo-track track-left">
-              {/* First row - naturally white/monochrome logos */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/react/white" alt="React" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/javascript/white" alt="JavaScript" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/python/white" alt="Python" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/nodedotjs/white" alt="Node.js" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/angular/white" alt="Angular" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/vuedotjs/white" alt="Vue" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/typescript/white" alt="TypeScript" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/html5/white" alt="HTML5" />
-              </div>
+              {/* First row - left to right */}
+              <div className="logo-slide"><img src="/images/tech-logos/react-logo.svg" alt="React" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/javascript-logo.svg" alt="JavaScript" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/python-logo.svg" alt="Python" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/nodejs-logo.svg" alt="Node.js" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/angular-logo.svg" alt="Angular" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/vue-logo.svg" alt="Vue" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/typescript-logo.svg" alt="TypeScript" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/aws-logo.svg" alt="AWS" /></div>
               
               {/* Duplicate set for seamless loop */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/react/white" alt="React" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/javascript/white" alt="JavaScript" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/python/white" alt="Python" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/nodedotjs/white" alt="Node.js" />
-              </div>
+              <div className="logo-slide"><img src="/images/tech-logos/react-logo.svg" alt="React" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/javascript-logo.svg" alt="JavaScript" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/python-logo.svg" alt="Python" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/nodejs-logo.svg" alt="Node.js" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/angular-logo.svg" alt="Angular" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/vue-logo.svg" alt="Vue" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/typescript-logo.svg" alt="TypeScript" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/aws-logo.svg" alt="AWS" /></div>
             </div>
             
             <div className="logo-track track-right">
-              {/* Second row - naturally white/monochrome logos */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/mongodb/white" alt="MongoDB" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/docker/white" alt="Docker" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/firebase/white" alt="Firebase" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/figma/white" alt="Figma" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/css3/white" alt="CSS3" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/tensorflow/white" alt="TensorFlow" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt="Java" />
-              </div>
+              {/* Second row - right to left */}
+              <div className="logo-slide"><img src="/images/tech-logos/mongodb-logo.svg" alt="MongoDB" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/docker-logo.svg" alt="Docker" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/firebase-logo.svg" alt="Firebase" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/github-logo.svg" alt="GitHub" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/figma-logo.svg" alt="Figma" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/swift-logo.svg" alt="Swift" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/tensorflow-logo.svg" alt="TensorFlow" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/java-logo.svg" alt="Java" /></div>
               
               {/* Duplicate set for seamless loop */}
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/mongodb/white" alt="MongoDB" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/docker/white" alt="Docker" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/firebase/white" alt="Firebase" />
-              </div>
-              <div className="logo-slide">
-                <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" />
-              </div>
+              <div className="logo-slide"><img src="/images/tech-logos/mongodb-logo.svg" alt="MongoDB" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/docker-logo.svg" alt="Docker" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/firebase-logo.svg" alt="Firebase" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/github-logo.svg" alt="GitHub" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/figma-logo.svg" alt="Figma" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/swift-logo.svg" alt="Swift" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/tensorflow-logo.svg" alt="TensorFlow" /></div>
+              <div className="logo-slide"><img src="/images/tech-logos/java-logo.svg" alt="Java" /></div>
             </div>
           </div>
         </div>
-        <button 
-          className="explore-resources-btn" 
-          onClick={() => {
-            navigate('/resources');
-            window.scrollTo(0, 0); // Scroll to top after navigation
-          }}
-        >
-          Explore
-        </button>
+        <button className="explore-resources-btn">Explore</button>
       </div>
       
     </div>

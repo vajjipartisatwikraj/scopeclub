@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../App.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useNavigate } from 'react-router-dom';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,8 +114,6 @@ function Home() {
     });
   }, []);
 
-  const navigate = useNavigate();
-
   return (
     <div>
       <div className="green-container">
@@ -200,7 +198,7 @@ function Home() {
       
       </div>
       <div className="explore-resources">
-        <h2 ref={(el) => (headingsRef.current[3] = el)} className="explore-resources-head">Explore our <span className="highlighted">resources</span>.</h2>
+        <h2 className="explore-resources-head">Explore our <span className="highlighted">resources</span>.</h2>
         <p className="explore-resources-caption">At SCOPE Club, we believe in empowering students with the tools and knowledge they need to succeed. Our resources are designed to help you learn, grow, and excel in your coding journey.</p>
         <div className="resorces-logos">
           <div className="logo-carousel">
@@ -289,15 +287,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <button 
-          className="explore-resources-btn" 
-          onClick={() => {
-            navigate('/resources');
-            window.scrollTo(0, 0); // Scroll to top after navigation
-          }}
-        >
-          Explore
-        </button>
+        <button className="explore-resources-btn">Explore</button>
       </div>
       
     </div>

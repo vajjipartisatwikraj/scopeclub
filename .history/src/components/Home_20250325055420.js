@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../App.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useNavigate } from 'react-router-dom';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -113,8 +113,6 @@ function Home() {
       );
     });
   }, []);
-
-  const navigate = useNavigate();
 
   return (
     <div>
@@ -289,15 +287,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <button 
-          className="explore-resources-btn" 
-          onClick={() => {
-            navigate('/resources');
-            window.scrollTo(0, 0); // Scroll to top after navigation
-          }}
-        >
-          Explore
-        </button>
+        <button className="explore-resources-btn" href="/resources">Explore</button>
       </div>
       
     </div>

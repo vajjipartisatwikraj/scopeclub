@@ -697,10 +697,9 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
 /* Adjust spacing between icons */
 .social-link {
   display: inline-block;
-  margin: 0px;  /* Increased from 10px to provide more spacing between larger icons */
+  margin: 0 0px;  /* Increased from 10px to provide more spacing between larger icons */
   transition: all 0.3s ease;
   position: relative;
-  gap: 0px;
 }
 
 /* Make the hover effect slightly more pronounced for larger icons */
@@ -1023,7 +1022,7 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
   }
   
   .social-link {
-    margin: 0px;
+    margin: 0 8px;
   }
 }
 

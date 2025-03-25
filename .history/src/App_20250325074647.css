@@ -1023,7 +1023,7 @@ svg.twitter, svg.instagram, svg.linkedIn, svg.github {
   }
   
   .social-link {
-    margin: 0px;
+    margin: 0 8px;
   }
 }
 
