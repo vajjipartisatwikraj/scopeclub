@@ -1,22 +1,11 @@
 export const t27 = [
-  {
-    id: 0,
-    name: "Vaibhav",
-    position: "Technical Member",
-    alt: "Vaibhav",
-    image: "Team/t27/Vaibhav.jpeg",
-    socials: {
-      github: "https://github.com/vaibhavtadivaka",
-      instagram: "https://www.instagram.com/nagasaivaibhav",
-      linkedin: "https://www.linkedin.com/in/naga-sai-vaibhav-tadivaka-a901882a4/",
-    },
-  },
+
   {
     id: 1,
     name: "Pranadeep Reddy",
     position: "Technical Member",
     alt: "Pranadeep Reddy",
-    image: "Team/t27/Pranadeep.jpeg",
+    image: "Team/t27/pranadeep.jpeg",
     socials: {
       github: "https://github.com/pranadeep1",
       instagram: "https://www.instagram.com/pranadeepreddy",
@@ -40,7 +29,7 @@ export const t27 = [
     name: "Srinivas",
     position: "Technical Member",
     alt: "Srinivas",
-    image: "Team/t27/Srinivas.jpeg",
+    image: "Team/t27/srinivas.jpg",
     socials: {
       github: "",
       instagram: "",
@@ -89,7 +78,7 @@ export const t27 = [
     name: "Venkata Charan",
     position: "Technical Member",
     alt: "Venkata Charan",
-    image: "Team/t27/Venkata Charan.jpeg",
+    image: "Team/t27/venkata charan .jpeg",
     socials: {
       github: "",
       instagram: "",
@@ -101,7 +90,7 @@ export const t27 = [
     name: "Sai Sree",
     position: "Technical Member",
     alt: "Sai Sree",
-    image: "Team/t27/Sai Sree.jpeg",
+    image: "Team/t27/sai sree.jpeg",
     socials: {
       github: "",
       instagram: "",
@@ -200,7 +189,7 @@ export const t27 = [
     name: "Suvarna",
     position: "Promotions",
     alt: "Suvarna",
-    image: "Team/t27/Suvarna.jpg",
+    image: "Team/t27/suvarna.jpg",
     socials: {
       github: "",
       instagram: "",
