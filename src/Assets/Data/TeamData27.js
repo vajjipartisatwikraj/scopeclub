@@ -165,7 +165,7 @@ export const t27 = [
     name: "Jyoti",
     position: "Promotions",
     alt: "Jyoti",
-    image: "Team/t27/Jyoti.jpeg",
+    image: "Team/t27/jyoti.jpeg",
     socials: {
       github: "",
       instagram: "",
@@ -201,7 +201,7 @@ export const t27 = [
     name: "Vaishnavi",
     position: "Photography",
     alt: "Vaishnavi",
-    image: "Team/t27/Vaishnavi.jpeg",
+    image: "Team/t27/vyshnavi.jpeg",
     socials: {
       github: "",
       instagram: "",
