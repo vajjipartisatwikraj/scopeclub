@@ -5,7 +5,7 @@ export const t27 = [
     name: "Pranadeep Reddy",
     position: "Technical Member",
     alt: "Pranadeep Reddy",
-    image: "Team/t27/pranadeep.jpeg",
+    image: "Team/t27/Pranadeep.jpeg",
     socials: {
       github: "https://github.com/pranadeep1",
       instagram: "https://www.instagram.com/pranadeepreddy",
