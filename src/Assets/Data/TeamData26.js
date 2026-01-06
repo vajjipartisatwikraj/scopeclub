@@ -120,18 +120,6 @@ export const t26 = [
     },
   },
   {
-    id: 11,
-    name: "K.Anusha",
-    position: "Promotions",
-    alt: "K.Anusha",
-    image: "Team/t26/anusha.jpg",
-    socials: {
-      github: "",
-      instagram: "",
-      linkedin: "",
-    },
-  },
-  {
     id: 12,
     name: "M Harshavardhan",
     position: "Technical Member",
@@ -177,18 +165,6 @@ export const t26 = [
       github: "",
       instagram: "",
       linkedin: "https://www.linkedin.com/in/polina-sandeep-chowdary-66aa91292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },
-  },
-  {
-    id: 16,
-    name: "Sravya Lingisetty",
-    position: "Promotions",
-    alt: "Sravya Lingisetty",
-    image: "Team/t26/sravya.jpg",
-    socials: {
-      github: "",
-      instagram: "",
-      linkedin: "",
     },
   },
   {

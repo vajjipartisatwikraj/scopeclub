@@ -1,6 +1,18 @@
 [
   {
     "id": 1,
+    "title": "Zenith,25",
+    "date":"18th,19th and 20th december 2025",
+    "venue":"MLRIT",
+    "image":"images/ZENITH25_WHITE_LOGO.png",
+    "image2":"images/zenith-banner.png",
+    "description": "Zenith ’25 began with AWS Student Community Day, where AWS mentors conducted insightful sessions and hands-on workshops. These sessions provided strong exposure to cloud concepts and real-world applications. The next two days featured an intense hackathon, where students built projects based on given problem statements. It was a great blend of learning, innovation, and teamwork.",
+    "status":"0",
+    "prize": "₹ 1,00,000, AWS Swag Kits",
+    "registrationLink": "https://luma.com/exwr8e3v"
+  },
+  {
+    "id": 1,
     "title": "AWS Cloud Trek",
     "date":"17th, 18th October 2025",
     "time":"9:30 AM",
